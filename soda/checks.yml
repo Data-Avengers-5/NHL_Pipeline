@@ -1,0 +1,18 @@
+# Soda Core Data Quality Checks
+# NHL Pipeline — Role 5: Normasitah
+
+checks for stg_game:
+  - row_count > 0
+  - missing_count(game_id) = 0
+  - missing_count(season) = 0
+
+checks for stg_player:
+  - row_count > 0
+  - missing_count(player_id) = 0
+  - missing_count(player_name) = 0
+
+checks for stg_play:
+  - row_count > 0
+  - missing_count(play_id) = 0
+  - missing_percent(x) < 50
+  - missing_percent(y) < 50
