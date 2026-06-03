@@ -4,11 +4,12 @@
 # Run with: soda scan -d nhl_duckdb -c soda/configuration.yml soda/checks.yml
 
 # ---------------------------------------------------------------
-# stg_game — one row per game
+# stg_game — one row per game (23,735 rows expected)
 # ---------------------------------------------------------------
 checks for stg_game:
   # Completeness
-  - row_count > 0
+  - row_count between 20000 and 30000:
+      name: stg_game row count within expected range
   - missing_count(game_id) = 0:
       name: game_id must never be null
   - missing_count(season) = 0:
@@ -28,11 +29,12 @@ checks for stg_game:
       valid values: [R, P]
 
 # ---------------------------------------------------------------
-# stg_game_teams_stats — one row per team per game
+# stg_game_teams_stats — one row per team per game (52,610 rows expected)
 # ---------------------------------------------------------------
 checks for stg_game_teams_stats:
   # Completeness
-  - row_count > 0
+  - row_count between 45000 and 60000:
+      name: stg_game_teams_stats row count within expected range
   - missing_count(game_id) = 0:
       name: game_id must never be null
   - missing_count(team_id) = 0:
@@ -51,11 +53,12 @@ checks for stg_game_teams_stats:
       valid values: [home, away]
 
 # ---------------------------------------------------------------
-# stg_game_skater_stats — one row per skater per game
+# stg_game_skater_stats — one row per skater per game (945,830 rows expected)
 # ---------------------------------------------------------------
 checks for stg_game_skater_stats:
   # Completeness
-  - row_count > 0
+  - row_count between 800000 and 1100000:
+      name: stg_game_skater_stats row count within expected range
   - missing_count(game_id) = 0:
       name: game_id must never be null
   - missing_count(player_id) = 0:
@@ -75,7 +78,8 @@ checks for stg_game_skater_stats:
 # ---------------------------------------------------------------
 checks for stg_game_goalie_stats:
   # Completeness
-  - row_count > 0
+  - row_count > 0:
+      name: stg_game_goalie_stats must not be empty
   - missing_count(game_id) = 0:
       name: game_id must never be null
   - missing_count(player_id) = 0:
@@ -91,11 +95,12 @@ checks for stg_game_goalie_stats:
       name: shots faced cannot be negative
 
 # ---------------------------------------------------------------
-# stg_player_info — one row per player
+# stg_player_info — one row per player (3,925 rows expected)
 # ---------------------------------------------------------------
 checks for stg_player_info:
   # Completeness
-  - row_count > 0
+  - row_count between 3000 and 5000:
+      name: stg_player_info row count within expected range
   - missing_count(player_id) = 0:
       name: player_id must never be null
   - missing_count(firstName) = 0:
@@ -107,28 +112,71 @@ checks for stg_player_info:
       name: player_id must be unique
 
 # ---------------------------------------------------------------
-# stg_game_plays — one row per play event (filtered to 5 event types)
+# stg_team_info — one row per team (33 teams expected)
+# ---------------------------------------------------------------
+checks for stg_team_info:
+  # Completeness
+  - row_count between 30 and 36:
+      name: stg_team_info should have ~33 teams
+  - missing_count(team_id) = 0:
+      name: team_id must never be null
+  - missing_count(teamName) = 0:
+      name: team name must never be null
+  - missing_count(abbreviation) = 0:
+      name: team abbreviation must never be null
+  # Uniqueness
+  - duplicate_count(team_id) = 0:
+      name: team_id must be unique
+
+# ---------------------------------------------------------------
+# stg_game_plays — one row per play event (5,050,529 rows expected)
+# Filtered to 5 event types at ingestion
 # ---------------------------------------------------------------
 checks for stg_game_plays:
   # Completeness
-  - row_count > 0
+  - row_count between 4000000 and 6000000:
+      name: stg_game_plays row count within expected range
   - missing_count(play_id) = 0:
       name: play_id must never be null
   - missing_count(game_id) = 0:
       name: game_id must never be null
   - missing_count(event) = 0:
       name: event type must never be null
-  # Validity — only 5 event types should exist after filtering
+  # Validity — only 5 event types should exist after ingestion filter
   - invalid_count(event) = 0:
       name: only filtered event types should be present
       valid values: [Goal, Shot, Missed Shot, Blocked Shot, Penalty]
-  # The 41% finding — goal coordinates are frequently missing
+  # The 41% finding — goal coordinates are systematically missing
   - missing_percent(x) < 50:
-      name: x coordinate missing rate should be under 50 percent
+      name: overall x coordinate missing rate should be under 50 percent
   - missing_percent(y) < 50:
-      name: y coordinate missing rate should be under 50 percent
+      name: overall y coordinate missing rate should be under 50 percent
   # Alert if goal coordinate NULL rate drops below expected range
-  # (indicates someone may have filtered NULLs out upstream)
+  # This fires if someone filters NULLs out upstream — protecting the finding
   - missing_percent(x) > 30:
-      name: x coordinate missing rate for goals should be above 30 percent (41% expected)
+      name: goal x coordinate missing rate should be above 30 percent (41.4% expected)
       filter: event = 'Goal'
+
+# ---------------------------------------------------------------
+# stg_game_penalties — one row per penalty (247,828 rows expected)
+# ---------------------------------------------------------------
+checks for stg_game_penalties:
+  # Completeness
+  - row_count between 200000 and 300000:
+      name: stg_game_penalties row count within expected range
+  - missing_count(game_id) = 0:
+      name: game_id must never be null
+  - missing_count(team_id_for) = 0:
+      name: penalised team must always be present
+  - missing_count(penaltySeverity) = 0:
+      name: penalty severity must never be null
+  - missing_count(penaltyMinutes) = 0:
+      name: penalty minutes must never be null
+  # Validity
+  - min(penaltyMinutes) >= 2:
+      name: minimum penalty is 2 minutes
+  - max(penaltyMinutes) <= 10:
+      name: maximum standard penalty is 10 minutes
+  - invalid_count(penaltySeverity) = 0:
+      name: penalty severity must be a known type
+      valid values: [Minor, Major, Misconduct, Game Misconduct, Match]
