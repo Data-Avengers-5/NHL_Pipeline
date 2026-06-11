@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: mart_penalty_cost
+    description: >
+      Penalty cost by team, season, period, and severity.
+      Grain: 1 row per (team_id, season_year, penalty_severity, period).
+      Use to identify which teams, periods, and penalty types correlate with game losses.
+    columns:
+      - name: team_id
+        tests: [not_null]
+      - name: season_year
+        tests: [not_null]
+      - name: penalty_severity
+        tests: [not_null]
+      - name: period
+        tests: [not_null]
+      - name: loss_rate_pc
+        tests: [not_null]
+
+  - name: mart_shot_zones
+    description: >
+      Shot volume and conversion rate by team and season.
+      Grain: 1 row per (team_id, season_year). Scoped to 2010+ only —
+      pre-201
