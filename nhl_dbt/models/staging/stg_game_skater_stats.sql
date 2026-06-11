@@ -1,0 +1,25 @@
+SELECT
+    CAST(game_id AS bigint)                             AS game_id,
+    CAST(player_id AS bigint)                           AS player_id,
+    CAST(team_id AS integer)                            AS team_id,
+    CAST(timeOnIce AS integer)                          AS time_on_ice,
+    CAST(assists AS integer)                            AS assists,
+    CAST(goals AS integer)                              AS goals,
+    CAST((assists + goals) AS integer)                  AS points,
+    CAST(shots AS integer)                              AS shots,
+    CAST(hits AS integer)                               AS hits,
+    CAST(powerPlayGoals AS integer)                     AS pp_goals,
+    CAST(powerPlayAssists AS integer)                   AS pp_assists,
+    CAST(shortHandedGoals AS integer)                   AS sh_goals,
+    CAST(shortHandedAssists AS integer)                 AS sh_assists,
+    CAST(penaltyMinutes AS integer)                     AS penalty_minutes,
+    CAST(faceOffWins AS integer)                        AS fo_wins,
+    CAST(faceoffTaken AS integer)                       AS fo_taken,
+    CAST(plusMinus AS integer)                          AS plus_minus,
+    CAST(takeaways AS integer)                          AS takeaways,
+    CAST(giveaways AS integer)                          AS giveaways,
+    CAST(blocked AS integer)                            AS blocked,
+    CAST(evenTimeOnIce AS integer)                      AS even_time_on_ice,
+    CAST(powerPlayTimeOnIce AS integer)                 AS pp_time_on_ice
+FROM {{ source('raw', 'game_skater_stats') }}
+QUALIFY ROW_NUMBER() OVER (PARTITION BY game_id, player_id ORDER BY timeOnIce DESC) = 1

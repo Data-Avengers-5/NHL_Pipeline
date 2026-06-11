@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+
+    tables:
+      - name: game
+      - name: game_plays
+      - name: game_skater_stats
+      - name: game_teams_stats
+      - name: game_penalties
+      - name: player_info
+      - name: team_info
