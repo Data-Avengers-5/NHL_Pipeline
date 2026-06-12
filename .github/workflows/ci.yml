@@ -38,6 +38,6 @@ jobs:
         run: dbt deps
         working-directory: nhl_dbt
 
-      - name: Run dbt build
-        run: dbt build
+      - name: Run dbt compile
+        run: dbt compile
         working-directory: nhl_dbt
