@@ -22,6 +22,18 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Create dbt profiles
+        run: |
+          mkdir -p ~/.dbt
+          cat > ~/.dbt/profiles.yml << 'EOF'
+          nhl_dbt:
+            target: dev
+            outputs:
+              dev:
+                type: duckdb
+                path: nhl_raw.duckdb
+          EOF
+
       - name: Run dbt deps
         run: dbt deps
         working-directory: nhl_dbt
