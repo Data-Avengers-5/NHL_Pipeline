@@ -220,3 +220,4 @@ data/*.csv
 data/*.zip
 .venv/
 nhl_dbt/dev.duckdb
+*.duckdb
