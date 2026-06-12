@@ -74,23 +74,35 @@ Dashboard (5 decision pages)
 NHL_Pipeline/
 ├── README.md
 ├── requirements.txt               # Pinned dependencies
-├── .github/workflows/ci.yml       # dbt tests run on every PR
+├── .github/workflows/ci.yml       # dbt compile runs on every PR
+├── data/                          # CSVs go here (gitignored) — download from Kaggle
+│   └── .gitkeep
 ├── docs/
 │   ├── architecture.md            # Pipeline design and tool decisions
-│   ├── findings.md                # The 41% story + business answers
-│   └── decisions/                 # Architecture Decision Records (ADRs)
-├── ingestion/
-│   ├── extract.py                 # Polars: CSV → Parquet
-│   └── load_duckdb.py             # Parquet → DuckDB
-├── dbt_project/
+│   ├── findings.md                # The 41% story + data quality findings
+│   ├── validation_samples.md      # 5 business queries with quantified recommendations
+│   └── table_relationships.JPG    # ERD
+├── python/
+│   └── ingest.py                  # Polars: CSV → DuckDB bronze layer
+├── nhl_dbt/
 │   ├── dbt_project.yml
 │   ├── models/
-│   │   ├── staging/               # 7 staging models
-│   │   ├── intermediate/          # fact_play (ephemeral)
-│   │   └── marts/                 # 5 gold marts
-│   └── schema.yml
+│   │   ├── staging/               # 7 staging views (silver layer)
+│   │   └── gold/                  # dims, facts, 5 marts
+│   │       ├── dim_game.sql
+│   │       ├── dim_player.sql
+│   │       ├── dim_team.sql
+│   │       ├── fct_play.sql
+│   │       ├── fct_game_teams_stats.sql
+│   │       ├── mart_player_season.sql
+│   │       ├── mart_shot_zones.sql
+│   │       ├── mart_penalty_cost.sql
+│   │       ├── mart_venue_advtg.sql
+│   │       ├── mart_team_traject.sql
+│   │       └── schema.yml
+│   └── profiles.yml               # local only — not committed
 └── soda/
-    └── checks.yml
+    └── checks.yml                 # Soda Core data quality checks
 ```
 
 ---
