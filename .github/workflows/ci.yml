@@ -24,6 +24,8 @@ jobs:
 
       - name: Run dbt deps
         run: dbt deps
+        working-directory: nhl_dbt
 
       - name: Run dbt build
         run: dbt build
+        working-directory: nhl_dbt
