@@ -1,0 +1,574 @@
+team_name,city,season_year,games_played,wins,win_pct,avg_goals_for,avg_shots
+Avalanche,Colorado,2000,72,52,72.2,3.43,29.18
+Avalanche,Colorado,2001,74,45,60.8,2.65,27.07
+Avalanche,Colorado,2002,69,42,60.9,3.19,28.26
+Avalanche,Colorado,2003,69,40,58.0,3.0,29.49
+Avalanche,Colorado,2005,82,43,52.4,3.41,29.71
+Avalanche,Colorado,2006,82,44,53.7,3.26,31.74
+Avalanche,Colorado,2007,82,44,53.7,2.73,28.65
+Avalanche,Colorado,2008,82,32,39.0,2.32,28.77
+Avalanche,Colorado,2009,82,43,52.4,2.89,27.9
+Avalanche,Colorado,2010,82,30,36.6,2.7,29.2
+Avalanche,Colorado,2011,82,41,50.0,2.43,31.51
+Avalanche,Colorado,2012,48,16,33.3,2.38,29.48
+Avalanche,Colorado,2013,89,55,61.8,2.98,29.16
+Avalanche,Colorado,2014,82,39,47.6,2.55,27.88
+Avalanche,Colorado,2015,82,39,47.6,2.59,28.65
+Avalanche,Colorado,2016,82,22,26.8,2.01,28.1
+Avalanche,Colorado,2017,88,45,51.1,3.07,29.63
+Avalanche,Colorado,2018,376,180,47.9,3.12,32.69
+Avalanche,Colorado,2019,340,204,60.0,3.48,32.99
+Blackhawks,Chicago,2000,74,29,39.2,2.58,26.46
+Blackhawks,Chicago,2001,69,41,59.4,2.7,27.07
+Blackhawks,Chicago,2002,69,30,43.5,2.59,27.04
+Blackhawks,Chicago,2003,71,20,28.2,2.35,28.52
+Blackhawks,Chicago,2005,82,26,31.7,2.55,30.24
+Blackhawks,Chicago,2006,82,31,37.8,2.38,26.84
+Blackhawks,Chicago,2007,82,40,48.8,2.85,28.02
+Blackhawks,Chicago,2008,82,46,56.1,3.17,32.72
+Blackhawks,Chicago,2009,82,52,63.4,3.2,34.13
+Blackhawks,Chicago,2010,89,47,52.8,3.08,32.06
+Blackhawks,Chicago,2011,88,47,53.4,2.88,32.09
+Blackhawks,Chicago,2012,71,52,73.2,3.0,32.13
+Blackhawks,Chicago,2013,101,57,56.4,3.16,32.16
+Blackhawks,Chicago,2014,105,64,61.0,2.75,33.33
+Blackhawks,Chicago,2015,89,50,56.2,2.85,30.96
+Blackhawks,Chicago,2016,86,50,58.1,2.83,30.64
+Blackhawks,Chicago,2017,82,33,40.2,2.78,34.07
+Blackhawks,Chicago,2018,328,144,43.9,3.26,32.55
+Blackhawks,Chicago,2019,313,141,45.0,2.95,31.19
+Blue Jackets,Columbus,2000,73,28,38.4,2.36,25.32
+Blue Jackets,Columbus,2001,74,22,29.7,1.96,24.62
+Blue Jackets,Columbus,2002,74,29,39.2,2.58,26.12
+Blue Jackets,Columbus,2003,74,25,33.8,2.15,27.38
+Blue Jackets,Columbus,2005,82,35,42.7,2.62,27.44
+Blue Jackets,Columbus,2006,82,33,40.2,2.39,27.72
+Blue Jackets,Columbus,2007,82,34,41.5,2.32,29.04
+Blue Jackets,Columbus,2008,82,41,50.0,2.68,28.91
+Blue Jackets,Columbus,2009,82,32,39.0,2.61,28.51
+Blue Jackets,Columbus,2010,82,34,41.5,2.56,30.56
+Blue Jackets,Columbus,2011,82,29,35.4,2.41,29.93
+Blue Jackets,Columbus,2012,48,24,50.0,2.4,26.73
+Blue Jackets,Columbus,2013,88,45,51.1,2.77,29.86
+Blue Jackets,Columbus,2014,82,42,51.2,2.77,28.85
+Blue Jackets,Columbus,2015,82,34,41.5,2.6,29.11
+Blue Jackets,Columbus,2016,87,51,58.6,2.99,31.44
+Blue Jackets,Columbus,2017,88,47,53.4,2.89,33.6
+Blue Jackets,Columbus,2018,368,212,57.6,3.11,31.65
+Blue Jackets,Columbus,2019,320,148,46.3,2.55,32.54
+Blues,St Louis,2000,70,43,61.4,3.19,30.34
+Blues,St Louis,2001,74,43,58.1,2.81,28.99
+Blues,St Louis,2002,71,41,57.7,3.1,27.82
+Blues,St Louis,2003,71,39,54.9,2.42,27.07
+Blues,St Louis,2005,82,21,25.6,2.35,28.48
+Blues,St Louis,2006,82,34,41.5,2.54,26.85
+Blues,St Louis,2007,82,33,40.2,2.46,26.11
+Blues,St Louis,2008,82,41,50.0,2.77,27.7
+Blues,St Louis,2009,82,40,48.8,2.66,29.82
+Blues,St Louis,2010,82,38,46.3,2.88,30.18
+Blues,St Louis,2011,91,53,58.2,2.48,30.41
+Blues,St Louis,2012,54,31,57.4,2.48,28.02
+Blues,St Louis,2013,88,54,61.4,2.88,29.75
+Blues,St Louis,2014,88,53,60.2,2.88,30.63
+Blues,St Louis,2015,102,59,57.8,2.71,29.65
+Blues,St Louis,2016,93,52,55.9,2.74,28.25
+Blues,St Louis,2017,82,44,53.7,2.72,32.65
+Blues,St Louis,2018,432,244,56.5,2.95,31.35
+Blues,St Louis,2019,320,176,55.0,3.06,30.99
+Bruins,Boston,2000,74,36,48.6,2.8,28.57
+Bruins,Boston,2001,76,43,56.6,2.93,31.41
+Bruins,Boston,2002,71,36,50.7,3.06,32.3
+Bruins,Boston,2003,67,41,61.2,2.66,29.96
+Bruins,Boston,2005,82,29,35.4,2.78,30.62
+Bruins,Boston,2006,82,35,42.7,2.56,28.9
+Bruins,Boston,2007,82,41,50.0,2.51,28.52
+Bruins,Boston,2008,82,53,64.6,3.29,30.27
+Bruins,Boston,2009,82,39,47.6,2.39,31.7
+Bruins,Boston,2010,107,62,57.9,3.04,32.65
+Bruins,Boston,2011,89,52,58.4,3.09,32.6
+Bruins,Boston,2012,70,42,60.0,2.74,33.41
+Bruins,Boston,2013,94,61,64.9,3.06,32.01
+Bruins,Boston,2014,82,41,50.0,2.55,31.05
+Bruins,Boston,2015,82,42,51.2,2.88,31.95
+Bruins,Boston,2016,88,46,52.3,2.78,32.8
+Bruins,Boston,2017,94,55,58.5,3.28,32.78
+Bruins,Boston,2018,424,256,60.4,3.17,32.67
+Bruins,Boston,2019,332,196,59.0,3.08,32.18
+Canadiens,Montreal,2000,74,28,37.8,2.51,25.61
+Canadiens,Montreal,2001,70,36,51.4,2.66,25.43
+Canadiens,Montreal,2002,74,30,40.5,2.59,25.72
+Canadiens,Montreal,2003,75,41,54.7,2.67,27.56
+Canadiens,Montreal,2005,82,42,51.2,2.94,30.12
+Canadiens,Montreal,2006,82,42,51.2,2.91,29.59
+Canadiens,Montreal,2007,82,47,57.3,3.13,29.06
+Canadiens,Montreal,2008,82,41,50.0,2.95,30.01
+Canadiens,Montreal,2009,82,39,47.6,2.56,28.61
+Canadiens,Montreal,2010,89,47,52.8,2.58,31.81
+Canadiens,Montreal,2011,82,31,37.8,2.52,28.54
+Canadiens,Montreal,2012,53,30,56.6,2.92,31.09
+Canadiens,Montreal,2013,99,56,56.6,2.63,28.58
+Canadiens,Montreal,2014,94,56,59.6,2.54,29.26
+Canadiens,Montreal,2015,82,38,46.3,2.63,30.55
+Canadiens,Montreal,2016,88,49,55.7,2.66,30.3
+Canadiens,Montreal,2017,82,29,35.4,2.52,32.77
+Canadiens,Montreal,2018,328,176,53.7,3.0,34.1
+Canadiens,Montreal,2019,321,141,43.9,2.85,33.5
+Canucks,Vancouver,2000,71,36,50.7,3.08,29.82
+Canucks,Vancouver,2001,75,42,56.0,3.15,28.53
+Canucks,Vancouver,2002,69,45,65.2,3.36,29.03
+Canucks,Vancouver,2003,72,43,59.7,2.92,28.67
+Canucks,Vancouver,2005,82,42,51.2,3.07,28.76
+Canucks,Vancouver,2006,82,49,59.8,2.65,29.33
+Canucks,Vancouver,2007,82,39,47.6,2.52,27.46
+Canucks,Vancouver,2008,82,45,54.9,2.96,28.48
+Canucks,Vancouver,2009,82,49,59.8,3.27,30.9
+Canucks,Vancouver,2010,107,69,64.5,2.95,32.07
+Canucks,Vancouver,2011,87,52,59.8,2.86,31.67
+Canucks,Vancouver,2012,52,26,50.0,2.5,28.42
+Canucks,Vancouver,2013,82,36,43.9,2.33,30.82
+Canucks,Vancouver,2014,88,50,56.8,2.84,29.94
+Canucks,Vancouver,2015,82,31,37.8,2.27,28.18
+Canucks,Vancouver,2016,82,30,36.6,2.17,27.72
+Canucks,Vancouver,2017,82,31,37.8,2.66,30.06
+Canucks,Vancouver,2018,328,140,42.7,2.67,29.67
+Canucks,Vancouver,2019,344,184,53.5,3.16,30.28
+Capitals,Washington,2000,72,41,56.9,2.92,28.6
+Capitals,Washington,2001,71,36,50.7,2.79,27.49
+Capitals,Washington,2002,74,39,52.7,2.8,26.77
+Capitals,Washington,2003,72,23,31.9,2.28,23.78
+Capitals,Washington,2005,82,29,35.4,2.8,29.82
+Capitals,Washington,2006,82,28,34.1,2.85,27.99
+Capitals,Washington,2007,82,43,52.4,2.9,30.95
+Capitals,Washington,2008,82,50,61.0,3.27,33.51
+Capitals,Washington,2009,82,54,65.9,3.82,32.84
+Capitals,Washington,2010,91,52,57.1,2.66,31.37
+Capitals,Washington,2011,96,49,51.0,2.57,27.94
+Capitals,Washington,2012,55,30,54.5,2.87,28.65
+Capitals,Washington,2013,82,38,46.3,2.74,29.43
+Capitals,Washington,2014,96,52,54.2,2.76,29.83
+Capitals,Washington,2015,94,62,66.0,2.95,30.83
+Capitals,Washington,2016,95,62,65.3,3.13,30.89
+Capitals,Washington,2017,106,65,61.3,3.23,29.63
+Capitals,Washington,2018,356,204,57.3,3.3,30.13
+Capitals,Washington,2019,308,172,55.8,3.23,31.23
+Coyotes,Phoenix,2000,65,35,53.8,2.82,25.55
+Coyotes,Phoenix,2001,73,40,54.8,2.9,26.7
+Coyotes,Phoenix,2002,71,31,43.7,2.49,27.85
+Coyotes,Phoenix,2003,64,22,34.4,2.28,25.48
+Coyotes,Phoenix,2005,82,38,46.3,2.95,28.01
+Coyotes,Phoenix,2006,82,31,37.8,2.57,28.29
+Coyotes,Phoenix,2007,82,38,46.3,2.55,30.49
+Coyotes,Phoenix,2008,82,36,43.9,2.5,28.09
+Coyotes,Phoenix,2009,82,50,61.0,2.57,30.54
+Coyotes,Phoenix,2010,86,43,50.0,2.74,30.28
+Coyotes,Phoenix,2011,98,51,52.0,2.52,29.14
+Coyotes,Phoenix,2012,48,21,43.8,2.52,30.9
+Coyotes,Phoenix,2013,82,37,45.1,2.56,30.48
+Coyotes,Arizona,2014,82,24,29.3,2.01,29.18
+Coyotes,Arizona,2015,82,35,42.7,2.54,27.63
+Coyotes,Arizona,2016,82,30,36.6,2.33,27.82
+Coyotes,Arizona,2017,82,29,35.4,2.51,29.88
+Coyotes,Arizona,2018,328,156,47.6,2.55,30.74
+Coyotes,Arizona,2019,316,148,46.8,2.68,31.05
+Devils,New Jersey,2000,70,48,68.6,3.8,31.27
+Devils,New Jersey,2001,73,41,56.2,2.53,29.37
+Devils,New Jersey,2002,72,46,63.9,2.68,31.31
+Devils,New Jersey,2003,70,43,61.4,2.66,29.41
+Devils,New Jersey,2005,82,46,56.1,2.84,29.21
+Devils,New Jersey,2006,82,49,59.8,2.51,28.7
+Devils,New Jersey,2007,82,46,56.1,2.41,28.8
+Devils,New Jersey,2008,82,51,62.2,2.9,32.9
+Devils,New Jersey,2009,82,48,58.5,2.63,29.99
+Devils,New Jersey,2010,82,38,46.3,2.09,28.59
+Devils,New Jersey,2011,106,62,58.5,2.59,27.68
+Devils,New Jersey,2012,48,19,39.6,2.29,28.4
+Devils,New Jersey,2013,82,35,42.7,2.4,26.83
+Devils,New Jersey,2014,82,32,39.0,2.15,24.5
+Devils,New Jersey,2015,82,38,46.3,2.22,24.44
+Devils,New Jersey,2016,82,28,34.1,2.2,27.79
+Devils,New Jersey,2017,87,45,51.7,2.93,31.85
+Devils,New Jersey,2018,328,124,37.8,2.67,30.34
+Devils,New Jersey,2019,276,112,40.6,2.68,30.68
+Ducks,Anaheim,2000,71,25,35.2,2.3,25.89
+Ducks,Anaheim,2001,74,29,39.2,2.18,26.05
+Ducks,Anaheim,2002,73,40,54.8,2.52,27.18
+Ducks,Anaheim,2003,72,29,40.3,2.28,29.63
+Ducks,Anaheim,2005,82,43,52.4,3.06,31.52
+Ducks,Anaheim,2006,82,48,58.5,3.1,31.49
+Ducks,Anaheim,2007,82,47,57.3,2.4,27.33
+Ducks,Anaheim,2008,82,42,51.2,2.9,30.26
+Ducks,Anaheim,2009,82,39,47.6,2.84,30.15
+Ducks,Anaheim,2010,88,49,55.7,2.9,28.38
+Ducks,Anaheim,2011,82,34,41.5,2.45,27.95
+Ducks,Anaheim,2012,55,33,60.0,2.82,28.58
+Ducks,Anaheim,2013,95,61,64.2,3.14,30.71
+Ducks,Anaheim,2014,98,62,63.3,2.91,30.89
+Ducks,Anaheim,2015,89,49,55.1,2.62,30.17
+Ducks,Anaheim,2016,99,56,56.6,2.73,30.37
+Ducks,Anaheim,2017,86,44,51.2,2.73,30.33
+Ducks,Anaheim,2018,328,140,42.7,2.39,27.7
+Ducks,Anaheim,2019,284,116,40.8,2.56,29.66
+Flames,Calgary,2000,67,27,40.3,2.43,27.09
+Flames,Calgary,2001,70,32,45.7,2.41,26.16
+Flames,Calgary,2002,69,29,42.0,2.3,28.13
+Flames,Calgary,2003,75,42,56.0,2.41,26.69
+Flames,Calgary,2005,82,46,56.1,2.63,28.04
+Flames,Calgary,2006,82,43,52.4,3.11,27.34
+Flames,Calgary,2007,82,42,51.2,2.76,28.24
+Flames,Calgary,2008,82,46,56.1,3.06,32.23
+Flames,Calgary,2009,82,40,48.8,2.45,28.67
+Flames,Calgary,2010,82,41,50.0,2.94,30.51
+Flames,Calgary,2011,82,37,45.1,2.43,27.55
+Flames,Calgary,2012,48,19,39.6,2.67,26.94
+Flames,Calgary,2013,82,35,42.7,2.46,26.82
+Flames,Calgary,2014,93,50,53.8,2.84,27.2
+Flames,Calgary,2015,82,35,42.7,2.79,29.24
+Flames,Calgary,2016,86,45,52.3,2.69,29.38
+Flames,Calgary,2017,82,37,45.1,2.63,33.65
+Flames,Calgary,2018,348,204,58.6,3.45,32.41
+Flames,Calgary,2019,317,161,50.8,2.95,31.56
+Flyers,Philadelphia,2000,71,43,60.6,3.06,29.55
+Flyers,Philadelphia,2001,72,42,58.3,2.88,29.43
+Flyers,Philadelphia,2002,69,45,65.2,2.71,30.35
+Flyers,Philadelphia,2003,67,40,59.7,2.97,28.49
+Flyers,Philadelphia,2005,82,45,54.9,3.21,31.12
+Flyers,Philadelphia,2006,82,22,26.8,2.6,28.79
+Flyers,Philadelphia,2007,82,42,51.2,2.99,28.77
+Flyers,Philadelphia,2008,82,44,53.7,3.17,29.77
+Flyers,Philadelphia,2009,82,41,50.0,2.83,31.57
+Flyers,Philadelphia,2010,93,51,54.8,3.06,32.31
+Flyers,Philadelphia,2011,93,52,55.9,3.24,31.61
+Flyers,Philadelphia,2012,48,23,47.9,2.75,29.06
+Flyers,Philadelphia,2013,89,45,50.6,2.8,29.99
+Flyers,Philadelphia,2014,82,33,40.2,2.59,29.43
+Flyers,Philadelphia,2015,88,43,48.9,2.47,30.65
+Flyers,Philadelphia,2016,82,39,47.6,2.59,31.52
+Flyers,Philadelphia,2017,88,44,50.0,3.0,31.59
+Flyers,Philadelphia,2018,328,148,45.1,2.94,31.5
+Flyers,Philadelphia,2019,340,204,60.0,3.12,30.58
+Golden Knights,Vegas,2017,102,64,62.7,3.19,32.51
+Golden Knights,Vegas,2018,356,184,51.7,3.04,34.37
+Golden Knights,Vegas,2019,364,204,56.0,3.09,34.87
+Hurricanes,Carolina,2000,73,38,52.1,2.66,27.08
+Hurricanes,Carolina,2001,66,35,53.0,2.77,27.8
+Hurricanes,Carolina,2002,71,22,31.0,2.1,29.27
+Hurricanes,Carolina,2003,68,28,41.2,2.03,28.6
+Hurricanes,Carolina,2005,82,52,63.4,3.49,31.13
+Hurricanes,Carolina,2006,82,40,48.8,2.94,31.21
+Hurricanes,Carolina,2007,82,43,52.4,3.05,32.55
+Hurricanes,Carolina,2008,82,45,54.9,2.88,32.62
+Hurricanes,Carolina,2009,82,35,42.7,2.76,29.29
+Hurricanes,Carolina,2010,82,40,48.8,2.82,30.7
+Hurricanes,Carolina,2011,82,33,40.2,2.59,30.46
+Hurricanes,Carolina,2012,48,19,39.6,2.65,32.19
+Hurricanes,Carolina,2013,82,36,43.9,2.5,31.23
+Hurricanes,Carolina,2014,82,30,36.6,2.23,30.78
+Hurricanes,Carolina,2015,82,35,42.7,2.39,29.89
+Hurricanes,Carolina,2016,82,36,43.9,2.59,30.4
+Hurricanes,Carolina,2017,82,36,43.9,2.74,33.91
+Hurricanes,Carolina,2018,388,216,55.7,2.91,33.8
+Hurricanes,Carolina,2019,301,165,54.8,3.15,32.72
+Islanders,NY Islanders,2000,75,21,28.0,2.24,27.52
+Islanders,NY Islanders,2001,74,42,56.8,2.92,27.66
+Islanders,NY Islanders,2002,71,35,49.3,2.76,29.35
+Islanders,NY Islanders,2003,71,38,53.5,2.96,28.06
+Islanders,NY Islanders,2005,82,36,43.9,2.7,30.26
+Islanders,NY Islanders,2006,82,40,48.8,2.93,29.99
+Islanders,NY Islanders,2007,82,35,42.7,2.3,29.7
+Islanders,NY Islanders,2008,82,26,31.7,2.41,28.94
+Islanders,NY Islanders,2009,82,34,41.5,2.61,30.41
+Islanders,NY Islanders,2010,82,30,36.6,2.74,29.38
+Islanders,NY Islanders,2011,82,34,41.5,2.39,29.39
+Islanders,NY Islanders,2012,54,26,48.1,2.81,31.15
+Islanders,NY Islanders,2013,82,34,41.5,2.63,30.94
+Islanders,NY Islanders,2014,89,50,56.2,2.92,33.37
+Islanders,NY Islanders,2015,93,50,53.8,2.72,29.85
+Islanders,NY Islanders,2016,82,41,50.0,2.91,30.24
+Islanders,NY Islanders,2017,82,35,42.7,3.18,31.38
+Islanders,NY Islanders,2018,360,208,57.8,2.69,28.94
+Islanders,NY Islanders,2019,357,189,52.9,2.84,29.74
+Jets,Winnipeg,2011,82,37,45.1,2.7,30.13
+Jets,Winnipeg,2012,48,24,50.0,2.63,28.96
+Jets,Winnipeg,2013,82,37,45.1,2.67,30.68
+Jets,Winnipeg,2014,86,43,50.0,2.7,29.73
+Jets,Winnipeg,2015,82,35,42.7,2.59,29.62
+Jets,Winnipeg,2016,82,40,48.8,3.0,29.85
+Jets,Winnipeg,2017,99,61,61.6,3.29,32.42
+Jets,Winnipeg,2018,352,196,55.7,3.25,31.02
+Jets,Winnipeg,2019,297,152,51.2,2.94,31.23
+Kings,Los Angeles,2000,69,38,55.1,3.17,27.48
+Kings,Los Angeles,2001,71,40,56.3,2.69,25.55
+Kings,Los Angeles,2002,76,33,43.4,2.53,27.68
+Kings,Los Angeles,2003,66,28,42.4,2.48,27.97
+Kings,Los Angeles,2005,82,42,51.2,2.96,29.2
+Kings,Los Angeles,2006,82,27,32.9,2.72,31.0
+Kings,Los Angeles,2007,82,32,39.0,2.76,28.65
+Kings,Los Angeles,2008,82,34,41.5,2.46,29.06
+Kings,Los Angeles,2009,82,46,56.1,2.82,29.13
+Kings,Los Angeles,2010,88,48,54.5,2.6,28.77
+Kings,Los Angeles,2011,102,56,54.9,2.4,30.59
+Kings,Los Angeles,2012,66,36,54.5,2.55,28.65
+Kings,Los Angeles,2013,108,62,57.4,2.65,31.8
+Kings,Los Angeles,2014,82,40,48.8,2.66,30.93
+Kings,Los Angeles,2015,87,49,56.3,2.69,31.61
+Kings,Los Angeles,2016,82,39,47.6,2.43,31.15
+Kings,Los Angeles,2017,86,45,52.3,2.79,31.1
+Kings,Los Angeles,2018,328,124,37.8,2.43,28.76
+Kings,Los Angeles,2019,280,116,41.4,2.53,33.21
+Lightning,Tampa Bay,2000,76,24,31.6,2.53,24.37
+Lightning,Tampa Bay,2001,71,27,38.0,2.15,26.08
+Lightning,Tampa Bay,2002,66,36,54.5,2.82,28.98
+Lightning,Tampa Bay,2003,74,46,62.2,3.14,29.86
+Lightning,Tampa Bay,2005,82,43,52.4,3.0,31.63
+Lightning,Tampa Bay,2006,82,44,53.7,2.96,29.49
+Lightning,Tampa Bay,2007,82,31,37.8,2.7,28.71
+Lightning,Tampa Bay,2008,82,24,29.3,2.52,28.51
+Lightning,Tampa Bay,2009,82,34,41.5,2.6,28.87
+Lightning,Tampa Bay,2010,100,57,57.0,3.0,31.27
+Lightning,Tampa Bay,2011,82,38,46.3,2.83,27.16
+Lightning,Tampa Bay,2012,48,18,37.5,3.06,27.56
+Lightning,Tampa Bay,2013,86,46,53.5,2.81,29.66
+Lightning,Tampa Bay,2014,108,64,59.3,3.0,29.25
+Lightning,Tampa Bay,2015,99,57,57.6,2.75,29.06
+Lightning,Tampa Bay,2016,82,42,51.2,2.8,29.93
+Lightning,Tampa Bay,2017,99,65,65.7,3.43,32.09
+Lightning,Tampa Bay,2018,344,248,72.1,3.8,31.83
+Lightning,Tampa Bay,2019,380,244,64.2,3.37,32.16
+Maple Leafs,Toronto,2000,71,37,52.1,2.85,27.82
+Maple Leafs,Toronto,2001,72,43,59.7,3.15,28.11
+Maple Leafs,Toronto,2002,75,44,58.7,2.89,26.07
+Maple Leafs,Toronto,2003,72,45,62.5,3.0,27.18
+Maple Leafs,Toronto,2005,82,41,50.0,3.1,28.33
+Maple Leafs,Toronto,2006,82,40,48.8,3.1,32.7
+Maple Leafs,Toronto,2007,82,36,43.9,2.78,31.0
+Maple Leafs,Toronto,2008,82,34,41.5,2.98,31.74
+Maple Leafs,Toronto,2009,82,30,36.6,2.56,32.57
+Maple Leafs,Toronto,2010,82,37,45.1,2.6,28.78
+Maple Leafs,Toronto,2011,82,35,42.7,2.77,28.32
+Maple Leafs,Toronto,2012,55,29,52.7,2.96,27.24
+Maple Leafs,Toronto,2013,82,38,46.3,2.71,27.95
+Maple Leafs,Toronto,2014,82,30,36.6,2.51,29.23
+Maple Leafs,Toronto,2015,82,29,35.4,2.34,30.67
+Maple Leafs,Toronto,2016,88,42,47.7,3.02,32.16
+Maple Leafs,Toronto,2017,89,52,58.4,3.26,31.9
+Maple Leafs,Toronto,2018,356,196,55.1,3.4,33.26
+Maple Leafs,Toronto,2019,300,152,50.7,3.29,33.21
+Oilers,Edmonton,2000,70,39,55.7,3.1,25.77
+Oilers,Edmonton,2001,70,38,54.3,2.61,27.6
+Oilers,Edmonton,2002,71,36,50.7,2.79,27.55
+Oilers,Edmonton,2003,70,36,51.4,2.77,27.47
+Oilers,Edmonton,2005,82,41,50.0,3.04,29.78
+Oilers,Edmonton,2006,82,32,39.0,2.34,26.74
+Oilers,Edmonton,2007,82,41,50.0,2.68,26.29
+Oilers,Edmonton,2008,82,38,46.3,2.78,28.09
+Oilers,Edmonton,2009,82,27,32.9,2.51,28.3
+Oilers,Edmonton,2010,82,25,30.5,2.33,26.7
+Oilers,Edmonton,2011,82,32,39.0,2.52,26.66
+Oilers,Edmonton,2012,48,19,39.6,2.56,26.77
+Oilers,Edmonton,2013,82,29,35.4,2.43,26.94
+Oilers,Edmonton,2014,82,24,29.3,2.35,28.43
+Oilers,Edmonton,2015,82,31,37.8,2.43,29.11
+Oilers,Edmonton,2016,95,54,56.8,2.94,30.84
+Oilers,Edmonton,2017,82,36,43.9,2.79,33.43
+Oilers,Edmonton,2018,328,140,42.7,2.79,29.17
+Oilers,Edmonton,2019,297,152,51.2,3.16,29.84
+Panthers,Florida,2000,69,22,31.9,2.45,25.86
+Panthers,Florida,2001,72,22,30.6,2.1,26.22
+Panthers,Florida,2002,69,24,34.8,2.1,26.74
+Panthers,Florida,2003,67,28,41.8,2.3,27.42
+Panthers,Florida,2005,82,37,45.1,2.88,33.22
+Panthers,Florida,2006,82,35,42.7,2.99,33.29
+Panthers,Florida,2007,82,38,46.3,2.57,31.09
+Panthers,Florida,2008,82,41,50.0,2.82,29.41
+Panthers,Florida,2009,82,32,39.0,2.46,28.43
+Panthers,Florida,2010,82,30,36.6,2.33,30.4
+Panthers,Florida,2011,89,41,46.1,2.4,29.54
+Panthers,Florida,2012,48,15,31.3,2.27,29.19
+Panthers,Florida,2013,82,29,35.4,2.29,29.89
+Panthers,Florida,2014,82,38,46.3,2.41,30.7
+Panthers,Florida,2015,88,49,55.7,2.8,29.49
+Panthers,Florida,2016,82,35,42.7,2.5,32.24
+Panthers,Florida,2017,82,44,53.7,2.99,34.43
+Panthers,Florida,2018,328,144,43.9,3.22,32.99
+Panthers,Florida,2019,289,144,49.8,3.24,32.32
+Penguins,Pittsburgh,2000,73,42,57.5,3.55,28.79
+Penguins,Pittsburgh,2001,74,28,37.8,2.35,26.72
+Penguins,Pittsburgh,2002,76,27,35.5,2.36,25.17
+Penguins,Pittsburgh,2003,74,23,31.1,2.3,24.92
+Penguins,Pittsburgh,2005,82,22,26.8,2.96,28.01
+Penguins,Pittsburgh,2006,82,47,57.3,3.26,28.85
+Penguins,Pittsburgh,2007,82,47,57.3,2.93,27.67
+Penguins,Pittsburgh,2008,82,45,54.9,3.15,29.04
+Penguins,Pittsburgh,2009,82,47,57.3,3.04,32.79
+Penguins,Pittsburgh,2010,89,52,58.4,2.72,31.9
+Penguins,Pittsburgh,2011,88,53,60.2,3.4,33.64
+Penguins,Pittsburgh,2012,63,44,69.8,3.35,30.76
+Penguins,Pittsburgh,2013,95,58,61.1,2.92,30.43
+Penguins,Pittsburgh,2014,87,44,50.6,2.59,31.33
+Penguins,Pittsburgh,2015,106,64,60.4,2.96,33.58
+Penguins,Pittsburgh,2016,107,66,61.7,3.32,32.43
+Penguins,Pittsburgh,2017,94,53,56.4,3.32,33.74
+Penguins,Pittsburgh,2018,344,176,51.2,3.22,33.34
+Penguins,Pittsburgh,2019,289,164,56.7,3.15,31.93
+Predators,Nashville,2000,73,34,46.6,2.27,26.18
+Predators,Nashville,2001,69,28,40.6,2.38,24.36
+Predators,Nashville,2002,69,27,39.1,2.28,28.01
+Predators,Nashville,2003,71,38,53.5,2.72,26.9
+Predators,Nashville,2005,82,49,59.8,3.09,29.04
+Predators,Nashville,2006,82,51,62.2,3.24,27.57
+Predators,Nashville,2007,82,41,50.0,2.77,29.57
+Predators,Nashville,2008,82,40,48.8,2.52,28.96
+Predators,Nashville,2009,82,47,57.3,2.65,30.59
+Predators,Nashville,2010,94,50,53.2,2.62,28.89
+Predators,Nashville,2011,92,53,57.6,2.76,27.57
+Predators,Nashville,2012,48,16,33.3,2.27,25.92
+Predators,Nashville,2013,82,38,46.3,2.61,29.05
+Predators,Nashville,2014,88,49,55.7,2.81,32.34
+Predators,Nashville,2015,96,48,50.0,2.66,30.39
+Predators,Nashville,2016,104,55,52.9,2.87,30.88
+Predators,Nashville,2017,95,60,63.2,3.18,32.71
+Predators,Nashville,2018,352,196,55.7,2.82,32.91
+Predators,Nashville,2019,292,144,49.3,3.05,33.56
+Rangers,NY Rangers,2000,77,33,42.9,3.04,28.66
+Rangers,NY Rangers,2001,78,36,46.2,2.81,29.12
+Rangers,NY Rangers,2002,72,32,44.4,2.54,30.21
+Rangers,NY Rangers,2003,75,27,36.0,2.56,29.23
+Rangers,NY Rangers,2005,82,44,53.7,3.05,29.85
+Rangers,NY Rangers,2006,82,42,51.2,2.84,31.54
+Rangers,NY Rangers,2007,82,42,51.2,2.5,31.45
+Rangers,NY Rangers,2008,82,43,52.4,2.44,32.43
+Rangers,NY Rangers,2009,82,38,46.3,2.67,29.57
+Rangers,NY Rangers,2010,87,45,51.7,2.67,29.9
+Rangers,NY Rangers,2011,102,61,59.8,2.6,28.68
+Rangers,NY Rangers,2012,60,31,51.7,2.53,30.75
+Rangers,NY Rangers,2013,107,58,54.2,2.6,32.26
+Rangers,NY Rangers,2014,101,64,63.4,2.9,31.38
+Rangers,NY Rangers,2015,87,47,54.0,2.79,28.63
+Rangers,NY Rangers,2016,94,54,57.4,3.05,30.15
+Rangers,NY Rangers,2017,82,34,41.5,2.78,30.95
+Rangers,NY Rangers,2018,328,128,39.0,2.7,29.18
+Rangers,NY Rangers,2019,289,148,51.2,3.26,31.05
+Red Wings,Detroit,2000,73,49,67.1,3.18,32.33
+Red Wings,Detroit,2001,72,51,70.8,3.17,30.89
+Red Wings,Detroit,2002,72,48,66.7,3.36,29.35
+Red Wings,Detroit,2003,71,48,67.6,3.24,29.97
+Red Wings,Detroit,2005,82,58,70.7,3.67,34.11
+Red Wings,Detroit,2006,82,50,61.0,3.07,33.79
+Red Wings,Detroit,2007,82,54,65.9,3.07,34.39
+Red Wings,Detroit,2008,82,51,62.2,3.52,36.16
+Red Wings,Detroit,2009,82,44,53.7,2.72,33.38
+Red Wings,Detroit,2010,93,54,58.1,3.15,33.82
+Red Wings,Detroit,2011,87,49,56.3,2.85,32.16
+Red Wings,Detroit,2012,62,31,50.0,2.5,30.08
+Red Wings,Detroit,2013,87,40,46.0,2.56,29.98
+Red Wings,Detroit,2014,89,46,51.7,2.76,29.18
+Red Wings,Detroit,2015,87,42,48.3,2.49,29.8
+Red Wings,Detroit,2016,82,33,40.2,2.41,28.48
+Red Wings,Detroit,2017,82,30,36.6,2.59,30.38
+Red Wings,Detroit,2018,328,128,39.0,2.73,29.2
+Red Wings,Detroit,2019,284,68,23.9,2.0,27.1
+Sabres,Buffalo,2000,77,46,59.7,2.7,27.04
+Sabres,Buffalo,2001,71,35,49.3,2.63,27.27
+Sabres,Buffalo,2002,72,27,37.5,2.43,28.64
+Sabres,Buffalo,2003,75,37,49.3,2.77,27.87
+Sabres,Buffalo,2005,82,52,63.4,3.37,30.61
+Sabres,Buffalo,2006,82,53,64.6,3.63,29.48
+Sabres,Buffalo,2007,82,39,47.6,3.06,30.22
+Sabres,Buffalo,2008,82,41,50.0,2.95,30.57
+Sabres,Buffalo,2009,82,45,54.9,2.82,31.56
+Sabres,Buffalo,2010,89,46,51.7,2.9,32.61
+Sabres,Buffalo,2011,82,39,47.6,2.57,29.23
+Sabres,Buffalo,2012,48,21,43.8,2.46,27.9
+Sabres,Buffalo,2013,82,21,25.6,1.83,26.3
+Sabres,Buffalo,2014,82,23,28.0,1.87,24.2
+Sabres,Buffalo,2015,82,35,42.7,2.43,29.49
+Sabres,Buffalo,2016,82,33,40.2,2.43,30.39
+Sabres,Buffalo,2017,82,25,30.5,2.41,31.2
+Sabres,Buffalo,2018,328,132,40.2,2.7,32.89
+Sabres,Buffalo,2019,276,120,43.5,2.8,29.29
+Senators,Ottawa,2000,73,48,65.8,3.37,29.9
+Senators,Ottawa,2001,73,39,53.4,3.11,29.95
+Senators,Ottawa,2002,74,52,70.3,3.3,29.28
+Senators,Ottawa,2003,72,43,59.7,3.35,28.36
+Senators,Ottawa,2005,82,52,63.4,3.8,34.28
+Senators,Ottawa,2006,82,48,58.5,3.49,32.33
+Senators,Ottawa,2007,82,43,52.4,3.15,30.13
+Senators,Ottawa,2008,82,36,43.9,2.6,29.34
+Senators,Ottawa,2009,82,44,53.7,2.68,29.73
+Senators,Ottawa,2010,82,32,39.0,2.32,29.04
+Senators,Ottawa,2011,89,44,49.4,2.88,31.37
+Senators,Ottawa,2012,58,30,51.7,2.47,33.02
+Senators,Ottawa,2013,82,37,45.1,2.79,32.83
+Senators,Ottawa,2014,88,45,51.1,2.77,31.11
+Senators,Ottawa,2015,82,38,46.3,2.8,28.35
+Senators,Ottawa,2016,101,55,54.5,2.5,30.07
+Senators,Ottawa,2017,82,28,34.1,2.67,30.67
+Senators,Ottawa,2018,328,116,35.4,2.95,29.62
+Senators,Ottawa,2019,284,100,35.2,2.68,30.62
+Sharks,San Jose,2000,70,40,57.1,2.77,27.74
+Sharks,San Jose,2001,74,44,59.5,3.16,26.82
+Sharks,San Jose,2002,73,28,38.4,2.59,27.74
+Sharks,San Jose,2003,70,43,61.4,2.69,27.64
+Sharks,San Jose,2005,82,44,53.7,3.23,30.28
+Sharks,San Jose,2006,82,51,62.2,3.12,28.61
+Sharks,San Jose,2007,82,49,59.8,2.63,29.61
+Sharks,San Jose,2008,82,53,64.6,3.06,33.17
+Sharks,San Jose,2009,82,51,62.2,3.13,31.76
+Sharks,San Jose,2010,100,57,57.0,2.94,34.96
+Sharks,San Jose,2011,87,44,50.6,2.61,33.53
+Sharks,San Jose,2012,59,32,54.2,2.39,31.81
+Sharks,San Jose,2013,89,54,60.7,2.93,34.82
+Sharks,San Jose,2014,82,40,48.8,2.73,31.61
+Sharks,San Jose,2015,106,60,56.6,2.94,29.57
+Sharks,San Jose,2016,88,48,54.5,2.65,29.88
+Sharks,San Jose,2017,92,51,55.4,3.01,33.1
+Sharks,San Jose,2018,408,224,54.9,3.4,32.47
+Sharks,San Jose,2019,280,116,41.4,2.57,30.01
+Stars,Dallas,2000,74,48,64.9,3.03,25.49
+Stars,Dallas,2001,69,36,52.2,2.62,27.62
+Stars,Dallas,2002,67,46,68.7,3.18,29.51
+Stars,Dallas,2003,69,41,59.4,2.42,26.49
+Stars,Dallas,2005,82,53,64.6,3.09,28.49
+Stars,Dallas,2006,82,50,61.0,2.65,28.0
+Stars,Dallas,2007,82,45,54.9,2.89,26.67
+Stars,Dallas,2008,82,36,43.9,2.73,28.9
+Stars,Dallas,2009,82,37,45.1,2.8,30.78
+Stars,Dallas,2010,82,42,51.2,2.71,27.67
+Stars,Dallas,2011,82,42,51.2,2.49,28.23
+Stars,Dallas,2012,48,22,45.8,2.67,26.27
+Stars,Dallas,2013,88,42,47.7,2.83,31.57
+Stars,Dallas,2014,82,41,50.0,3.13,31.2
+Stars,Dallas,2015,95,57,60.0,3.16,31.52
+Stars,Dallas,2016,82,34,41.5,2.71,30.56
+Stars,Dallas,2017,82,42,51.2,2.82,31.23
+Stars,Dallas,2018,380,200,52.6,2.57,30.79
+Stars,Dallas,2019,384,208,54.2,2.66,30.38
+Thrashers,Atlanta,2000,70,23,32.9,2.59,27.53
+Thrashers,Atlanta,2001,71,19,26.8,2.18,23.85
+Thrashers,Atlanta,2002,75,31,41.3,2.76,26.31
+Thrashers,Atlanta,2003,74,33,44.6,2.74,26.03
+Thrashers,Atlanta,2005,82,41,50.0,3.37,30.76
+Thrashers,Atlanta,2006,82,43,52.4,2.91,29.73
+Thrashers,Atlanta,2007,82,34,41.5,2.52,25.79
+Thrashers,Atlanta,2008,82,35,42.7,3.05,28.12
+Thrashers,Atlanta,2009,82,35,42.7,2.8,29.39
+Thrashers,Atlanta,2010,82,34,41.5,2.66,31.48
+Wild,Minnesota,2000,69,25,36.2,2.14,24.57
+Wild,Minnesota,2001,70,26,37.1,2.36,23.33
+Wild,Minnesota,2002,72,42,58.3,2.47,25.33
+Wild,Minnesota,2003,62,30,48.4,2.4,24.06
+Wild,Minnesota,2005,82,38,46.3,2.76,26.76
+Wild,Minnesota,2006,82,48,58.5,2.74,29.65
+Wild,Minnesota,2007,82,44,53.7,2.68,27.05
+Wild,Minnesota,2008,82,40,48.8,2.61,27.54
+Wild,Minnesota,2009,82,38,46.3,2.61,27.63
+Wild,Minnesota,2010,82,39,47.6,2.48,26.2
+Wild,Minnesota,2011,82,35,42.7,2.02,26.51
+Wild,Minnesota,2012,53,27,50.9,2.36,28.7
+Wild,Minnesota,2013,95,49,51.6,2.46,27.13
+Wild,Minnesota,2014,92,50,54.3,2.73,30.32
+Wild,Minnesota,2015,88,40,45.5,2.61,28.76
+Wild,Minnesota,2016,87,50,57.5,3.11,31.15
+Wild,Minnesota,2017,87,46,52.9,2.98,29.92
+Wild,Minnesota,2018,328,148,45.1,2.56,31.3
+Wild,Minnesota,2019,292,144,49.3,3.12,30.12

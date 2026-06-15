@@ -1,0 +1,629 @@
+venue,season_year,home_games,home_wins,home_win_pct,avg_home_goals,avg_away_goals,home_advantage_uplift
+STAPLES Center,2015,44,26,59.09,2.57,2.39,9.09
+PNC Arena,2017,41,19,46.34,2.68,2.98,-3.66
+BB&T Center,2017,41,27,65.85,3.34,2.88,15.85
+Wells Fargo Center,2017,44,22,50.0,2.98,3.14,0.0
+Nationwide Arena,2015,41,18,43.9,2.93,3.12,-6.1
+Pepsi Center,2015,40,17,42.5,2.63,3.03,-7.5
+PPG Paints Arena,2017,47,32,68.09,3.57,2.68,18.09
+Rogers Arena,2015,41,15,36.59,2.34,2.88,-13.41
+Madison Square Garden,2016,47,25,53.19,3.09,2.85,3.19
+KeyBank Center,2016,41,20,48.78,2.61,2.71,-1.22
+TCF Bank Stadium,2015,1,1,100.0,6.0,1.0,50.0
+Nationwide Arena,2014,41,19,46.34,2.83,3.24,-3.66
+Pepsi Center,2014,41,23,56.1,2.93,2.71,6.1
+STAPLES Center,2014,41,25,60.98,2.83,2.12,10.98
+Rogers Arena,2014,43,26,60.47,2.91,2.6,10.47
+Wells Fargo Center,2013,44,26,59.09,2.98,2.61,9.09
+Honda Center,2012,28,18,64.29,3.0,2.57,14.29
+Xcel Energy Center,2012,26,15,57.69,2.19,2.38,7.69
+Air Canada Centre,2012,27,14,51.85,3.0,2.96,1.85
+BB&T Center,2013,41,16,39.02,2.41,3.0,-10.98
+Verizon Center,2012,28,18,64.29,2.96,2.39,14.29
+MTS Centre,2012,24,13,54.17,2.83,2.75,4.17
+PNC Arena,2013,41,18,43.9,2.54,2.66,-6.1
+United Center,2012,37,29,78.38,3.19,2.16,28.38
+Scotiabank Saddledome,2011,41,23,56.1,2.66,2.59,6.1
+Rogers Arena,2010,55,37,67.27,3.02,2.2,17.27
+Nationwide Arena,2010,40,17,42.5,2.68,3.08,-7.5
+Staples Center,2010,44,25,56.82,2.77,2.55,6.82
+St. Pete Times Forum,2011,15,10,66.67,3.4,2.87,16.67
+Centre Bell,2011,41,16,39.02,2.8,2.71,-10.98
+Jobing.com Arena,2010,42,21,50.0,2.93,2.79,0.0
+Joe Louis Arena,2011,43,31,72.09,3.47,2.07,22.09
+Pepsi Center,2010,41,16,39.02,2.93,3.66,-10.98
+Heinz Field,2010,1,0,0.0,1.0,3.0,-50.0
+Scotiabank Place,2009,41,26,63.41,2.98,2.54,13.41
+Madison Square Garden,2009,41,18,43.9,3.02,2.76,-6.1
+RBC Center,2009,41,21,51.22,2.98,3.02,1.22
+HP Pavilion at San Jose,2008,41,32,78.05,3.44,2.2,28.05
+Prudential Center,2008,41,28,68.29,3.34,2.39,18.29
+Scottrade Center,2008,41,23,56.1,2.98,2.61,6.1
+TD Banknorth Garden,2008,41,29,70.73,3.73,2.37,20.73
+Centre Bell,2007,41,22,53.66,3.15,2.61,3.66
+Philips Arena,2007,41,19,46.34,2.98,3.15,-3.66
+St. Pete Times Forum,2007,41,20,48.78,2.95,2.88,-1.22
+Joe Louis Arena,2007,41,29,70.73,3.22,2.27,20.73
+General Motors Place,2007,41,21,51.22,2.78,2.51,1.22
+O2 Arena,2007,2,2,100.0,4.0,1.0,50.0
+TD Banknorth Garden,2006,41,18,43.9,2.68,3.46,-6.1
+HP Pavilion at San Jose,2006,41,25,60.98,3.29,2.29,10.98
+Scottrade Center,2006,41,18,43.9,2.68,2.98,-6.1
+Glendale Arena,2006,4,1,25.0,1.75,3.25,-25.0
+Pengrowth Saddledome,2002,31,14,45.16,2.39,2.9,-4.84
+Gaylord Entertainment Center,2002,36,18,50.0,2.47,2.25,0.0
+FleetCenter,2002,36,23,63.89,3.44,2.56,13.89
+American Airlines Center,2002,35,28,80.0,3.37,1.77,30.0
+RBC Center,2003,33,13,39.39,2.15,2.61,-10.61
+Madison Square Garden,2003,38,13,34.21,2.71,3.11,-15.79
+Savvis Center,2005,41,12,29.27,2.54,3.61,-20.73
+HSBC Arena,2005,41,27,65.85,3.71,2.71,15.85
+Wachovia Center,2005,41,22,53.66,3.39,3.34,3.66
+Nationwide Arena,2000,37,19,51.35,2.59,2.68,1.35
+Staples Center,2000,33,20,60.61,3.58,2.7,10.61
+Pepsi Center,2000,36,28,77.78,3.61,2.31,27.78
+Skyreach Centre,2000,34,23,67.65,3.21,2.26,17.65
+Entertainment and Sports Arena,2000,38,23,60.53,3.18,2.82,10.53
+Madison Square Garden,2001,39,19,48.72,2.95,3.21,-1.28
+PPG Paints Arena,2019,70,46,65.71,3.51,2.63,15.71
+PNC Arena,2019,66,38,57.58,3.3,2.7,7.58
+BB&T Center,2019,70,34,48.57,3.43,3.31,-1.43
+Wells Fargo Center,2019,68,48,70.59,3.53,2.09,20.59
+Mosaic Stadium,2019,2,2,100.0,2.0,1.0,50.0
+Rogers Arena,2018,82,40,48.78,2.98,3.07,-1.22
+Pepsi Center,2018,92,50,54.35,3.22,2.74,4.35
+Nationwide Arena,2018,92,50,54.35,3.17,2.98,4.35
+STAPLES Center,2018,82,34,41.46,2.68,3.17,-8.54
+United Center,2016,43,26,60.47,3.02,2.4,10.47
+CONSOL Energy Center,2015,54,35,64.81,3.2,2.54,14.81
+American Airlines Center,2017,41,26,63.41,3.12,2.41,13.41
+Bridgestone Arena,2015,47,27,57.45,3.06,2.4,7.45
+MTS Centre,2016,40,22,55.0,3.28,3.0,5.0
+Barclays Center,2017,41,19,46.34,3.41,3.73,-3.66
+Honda Center,2016,50,34,68.0,2.92,2.16,18.0
+Air Canada Centre,2016,43,21,48.84,2.98,2.84,-1.16
+Verizon Center,2016,48,35,72.92,3.13,1.83,22.92
+Xcel Energy Center,2016,44,27,61.36,3.27,2.3,11.36
+TD Garden,2015,40,17,42.5,2.75,3.1,-7.5
+Amalie Arena,2016,41,23,56.1,3.12,2.88,6.1
+Little Caesars Arena,2017,41,16,39.02,2.56,2.88,-10.98
+Rexall Place,2015,41,19,46.34,2.66,2.78,-3.66
+Rogers Place,2016,47,28,59.57,3.0,2.49,9.57
+Lansdowne Park,2017,1,1,100.0,3.0,0.0,50.0
+CONSOL Energy Center,2014,43,23,53.49,2.79,2.53,3.49
+Rexall Place,2014,41,15,36.59,2.34,3.05,-13.41
+Bridgestone Arena,2014,43,30,69.77,3.07,2.42,19.77
+TD Garden,2014,41,24,58.54,2.68,2.24,8.54
+Nassau Coliseum,2014,44,27,61.36,3.23,2.64,11.36
+First Niagara Center,2012,24,11,45.83,2.63,2.96,-4.17
+American Airlines Center,2013,44,25,56.82,3.16,2.45,6.82
+Scotiabank Place,2012,28,18,64.29,2.61,2.0,14.29
+Madison Square Garden,2012,29,20,68.97,3.14,2.14,18.97
+TD Garden,2010,53,32,60.38,3.17,2.11,10.38
+HP Pavilion at San Jose,2011,43,26,60.47,2.98,2.33,10.47
+Bridgestone Arena,2010,47,26,55.32,2.81,2.36,5.32
+Prudential Center,2011,52,31,59.62,2.85,2.46,9.62
+Rexall Place,2010,41,13,31.71,2.22,3.05,-18.29
+Scottrade Center,2011,46,32,69.57,2.85,1.85,19.57
+Nassau Coliseum,2010,41,17,41.46,3.22,3.12,-8.54
+CONSOL Energy Center,2010,44,26,59.09,2.82,2.39,9.09
+Ericsson Globe,2010,2,0,0.0,2.0,3.0,-50.0
+BankAtlantic Center,2009,40,16,40.0,2.78,2.98,-10.0
+Air Canada Centre,2009,41,18,43.9,2.59,2.85,-6.1
+Honda Center,2009,41,25,60.98,3.46,2.93,10.98
+United Center,2009,40,29,72.5,3.43,2.4,22.5
+Verizon Center,2009,41,30,73.17,3.88,2.66,23.17
+Xcel Energy Center,2009,41,25,60.98,3.2,2.9,10.98
+Mellon Arena,2009,41,25,60.98,3.49,2.78,10.98
+Globe Arena,2009,2,1,50.0,4.0,3.5,0.0
+Joe Louis Arena,2008,41,27,65.85,3.85,2.88,15.85
+General Motors Place,2008,41,24,58.54,3.15,2.46,8.54
+Centre Bell,2008,41,24,58.54,3.24,2.71,8.54
+Philips Arena,2008,41,18,43.9,3.02,3.39,-6.1
+St. Pete Times Forum,2008,40,12,30.0,2.6,3.45,-20.0
+Scottrade Center,2007,41,20,48.78,2.61,2.34,-1.22
+Prudential Center,2007,41,25,60.98,2.68,2.32,10.98
+TD Banknorth Garden,2007,41,21,51.22,2.44,2.34,1.22
+HP Pavilion at San Jose,2007,41,22,53.66,2.68,2.51,3.66
+Continental Airlines Arena,2006,41,25,60.98,2.61,2.41,10.98
+Philips Arena,2006,41,23,56.1,3.24,2.9,6.1
+Centre Bell,2006,41,26,63.41,3.27,2.8,13.41
+General Motors Place,2006,41,26,63.41,2.76,2.51,13.41
+Joe Louis Arena,2006,41,29,70.73,3.54,2.12,20.73
+St. Pete Times Forum,2006,41,22,53.66,2.9,2.85,3.66
+Nashville Arena,2006,6,3,50.0,2.67,2.5,0.0
+HSBC Arena,2002,36,18,50.0,2.89,2.72,0.0
+Savvis Center,2002,37,23,62.16,3.54,2.62,12.16
+Corel Centre,2003,36,23,63.89,3.39,2.03,13.89
+Mellon Arena,2003,35,13,37.14,2.31,3.74,-12.86
+Air Canada Centre,2003,38,22,57.89,2.82,2.55,7.89
+Office Depot Center,2003,34,16,47.06,2.62,2.68,-2.94
+United Center,2003,35,13,37.14,2.49,3.0,-12.86
+Xcel Energy Center,2003,34,19,55.88,2.62,2.18,5.88
+American Airlines Center,2005,41,28,68.29,3.27,2.63,18.29
+Pengrowth Saddledome,2005,41,30,73.17,2.63,1.78,23.17
+Gaylord Entertainment Center,2005,41,32,78.05,3.46,2.29,28.05
+Nassau Coliseum,2000,40,12,30.0,2.38,3.53,-20.0
+Ice Palace,2000,38,17,44.74,2.74,3.16,-5.26
+First Union Center,2000,37,26,70.27,3.08,2.11,20.27
+America West Arena,2001,38,27,71.05,3.55,2.32,21.05
+Centre Molson,2001,35,21,60.0,2.6,2.14,10.0
+Corel Centre,2001,38,21,55.26,2.82,2.39,5.26
+Air Canada Centre,2001,35,24,68.57,3.34,2.29,18.57
+Xcel Energy Center,2001,33,14,42.42,2.45,2.82,-7.58
+United Center,2001,36,28,77.78,2.83,1.92,27.78
+Mellon Arena,2001,37,16,43.24,2.73,3.11,-6.76
+Verizon Center                                                  ,2014,1,0,0.0,1.0,4.0,-50.0
+American Airlines Center,2019,66,36,54.55,2.45,2.27,4.55
+Little Caesars Arena,2019,74,24,32.43,2.11,3.43,-17.57
+Barclays Center,2019,22,14,63.64,3.27,2.82,13.64
+Cotton Bowl Stadium,2019,2,2,100.0,4.0,2.0,50.0
+TD Garden,2018,108,72,66.67,3.33,2.44,16.67
+Bridgestone Arena,2018,88,52,59.09,2.91,2.5,9.09
+Lincoln Financial Field,2018,2,2,100.0,4.0,3.0,50.0
+PNC Arena,2015,41,19,46.34,2.61,2.78,-3.66
+Centre Bell,2016,44,25,56.82,2.91,2.18,6.82
+Pepsi Center,2017,43,29,67.44,3.49,2.44,17.44
+Scotiabank Saddledome,2016,43,24,55.81,3.16,2.79,5.81
+Rogers Arena,2017,41,16,39.02,2.9,3.41,-10.98
+Nationwide Arena,2017,44,26,59.09,2.82,2.52,9.09
+Wells Fargo Center,2015,44,24,54.55,2.5,2.43,4.55
+Joe Louis Arena,2016,41,17,41.46,2.56,2.68,-8.54
+BB&T Center,2015,44,26,59.09,3.05,2.52,9.09
+STAPLES Center,2017,43,23,53.49,2.81,2.4,3.49
+Busch Stadium,2016,1,1,100.0,4.0,1.0,50.0
+PNC Arena,2014,41,18,43.9,2.27,2.29,-6.1
+Wells Fargo Center,2014,41,23,56.1,2.95,2.49,6.1
+BB&T Center,2014,41,21,51.22,2.66,2.68,1.22
+Rogers Arena,2013,40,20,50.0,2.53,2.4,0.0
+Nationwide Arena,2013,44,23,52.27,3.14,2.64,2.27
+Jobing.com Arena,2013,41,22,53.66,2.83,2.59,3.66
+Pepsi Center,2013,45,29,64.44,3.29,2.64,14.44
+HP Pavilion at San Jose,2012,29,22,75.86,3.03,1.97,25.86
+Prudential Center,2012,24,13,54.17,2.75,2.46,4.17
+Scottrade Center,2012,27,17,62.96,2.41,2.11,12.96
+Staples Center,2013,52,31,59.62,2.81,2.17,9.62
+Dodger Stadium,2013,1,0,0.0,0.0,3.0,-50.0
+HSBC Arena,2010,44,22,50.0,2.98,2.73,0.0
+RBC Center,2011,36,17,47.22,2.67,2.75,-2.78
+Wells Fargo Center,2010,47,24,51.06,3.15,2.77,1.06
+Scotiabank Place,2011,44,21,47.73,2.77,3.0,-2.27
+First Niagara Center,2011,40,20,50.0,2.98,2.73,0.0
+Madison Square Garden,2011,52,33,63.46,2.71,2.13,13.46
+Citizens Bank Park,2011,1,0,0.0,2.0,3.0,-50.0
+O2 Arena Berlin,2011,1,0,0.0,2.0,4.0,-50.0
+Centre Bell,2009,41,20,48.78,2.83,2.66,-1.22
+Philips Arena,2009,41,19,46.34,2.9,3.02,-3.66
+St. Pete Times Forum,2009,41,21,51.22,2.83,2.73,1.22
+Joe Louis Arena,2009,40,25,62.5,2.95,2.35,12.5
+General Motors Place,2009,41,30,73.17,3.63,2.15,23.17
+Fenway Park,2009,1,1,100.0,2.0,1.0,50.0
+Verizon Center,2008,41,29,70.73,3.56,2.73,20.73
+BankAtlantic Center,2008,41,22,53.66,2.78,2.56,3.66
+Xcel Energy Center,2008,41,23,56.1,3.02,2.34,6.1
+Honda Center,2008,41,20,48.78,3.02,2.9,-1.22
+United Center,2008,40,24,60.0,3.4,2.48,10.0
+Mellon Arena,2008,40,25,62.5,3.33,2.53,12.5
+Air Canada Centre,2008,41,16,39.02,2.9,3.46,-10.98
+Scotiabank Place,2007,41,22,53.66,3.24,3.07,3.66
+RBC Center,2007,41,24,58.54,3.41,2.95,8.54
+Madison Square Garden,2007,41,25,60.98,2.59,2.2,10.98
+Air Canada Centre,2006,41,21,51.22,3.1,3.12,1.22
+Honda Center,2006,41,26,63.41,3.51,2.56,13.41
+Mellon Arena,2006,41,26,63.41,3.32,2.54,13.41
+Xcel Energy Center,2006,41,29,70.73,3.0,1.98,20.73
+United Center,2006,41,17,41.46,2.15,2.61,-8.54
+Verizon Center,2006,41,17,41.46,3.17,3.29,-8.54
+BankAtlantic Center,2006,41,23,56.1,3.54,3.05,6.1
+Nassau Coliseum,2002,36,18,50.0,2.81,2.86,0.0
+First Union Center,2002,33,21,63.64,2.64,1.82,13.64
+Continental Airlines Arena,2003,36,22,61.11,2.67,2.11,11.11
+Centre Bell,2003,37,23,62.16,2.68,2.24,12.16
+St. Pete Times Forum,2003,37,24,64.86,3.16,2.35,14.86
+Philips Arena,2003,37,18,48.65,2.62,2.78,-1.35
+Joe Louis Arena,2003,37,30,81.08,3.57,1.95,31.08
+General Motors Place,2003,34,21,61.76,3.06,2.59,11.76
+Staples Center,2005,41,26,63.41,2.95,2.93,13.41
+Nationwide Arena,2005,41,23,56.1,2.95,3.2,6.1
+Pepsi Center,2005,41,25,60.98,3.68,2.95,10.98
+Savvis Center,2000,36,28,77.78,3.47,1.89,27.78
+HSBC Arena,2000,38,26,68.42,2.97,2.16,18.42
+Continental Airlines Arena,2001,37,22,59.46,2.76,2.11,9.46
+General Motors Place,2001,36,23,63.89,3.56,2.47,13.89
+Joe Louis Arena,2001,36,28,77.78,3.61,2.28,27.78
+Philips Arena,2001,32,11,34.38,2.03,3.16,-15.62
+National Car Rental Center,2001,38,11,28.95,2.24,3.16,-21.05
+Pepsi Center,2019,64,36,56.25,3.69,2.97,6.25
+Nationwide Arena,2019,72,40,55.56,2.61,2.31,5.56
+Rogers Arena,2019,70,44,62.86,3.71,2.77,12.86
+STAPLES Center,2019,68,38,55.88,2.76,2.59,5.88
+PPG Paints Arena,2018,86,46,53.49,3.19,3.07,3.49
+PNC Arena,2018,96,58,60.42,3.15,2.52,10.42
+Wells Fargo Center,2018,80,36,45.0,2.93,3.3,-5.0
+BB&T Center,2018,80,40,50.0,3.43,2.95,0.0
+Gila River Arena,2016,41,18,43.9,2.54,2.85,-6.1
+Prudential Center,2016,41,16,39.02,2.29,2.95,-10.98
+SAP Center at San Jose,2016,44,27,61.36,2.7,2.14,11.36
+Barclays Center,2015,46,27,58.7,3.02,2.52,8.7
+TD Garden,2017,47,31,65.96,3.7,2.64,15.96
+Bridgestone Arena,2017,48,31,64.58,3.4,2.79,14.58
+American Airlines Center,2015,48,31,64.58,3.23,2.67,14.58
+Scottrade Center,2016,45,26,57.78,2.91,2.71,7.78
+Canadian Tire Centre,2016,50,28,56.0,2.62,2.4,6.0
+Ericsson Globe,2017,2,1,50.0,3.5,3.5,0.0
+Coors Field,2015,1,0,0.0,3.0,5.0,-50.0
+American Airlines Center,2014,41,17,41.46,3.12,3.22,-8.54
+Bridgestone Arena,2013,41,19,46.34,2.59,2.9,-3.66
+TD Garden,2013,48,35,72.92,3.17,1.81,22.92
+Scotiabank Saddledome,2012,24,13,54.17,3.25,3.33,4.17
+CONSOL Energy Center,2013,48,31,64.58,3.17,2.38,14.58
+Nassau Coliseum,2013,40,13,32.5,2.7,3.35,-17.5
+Tampa Bay Times Forum,2013,43,25,58.14,3.14,2.65,8.14
+Joe Louis Arena,2012,30,17,56.67,2.77,2.37,6.67
+Rexall Place,2013,41,16,39.02,2.59,3.29,-10.98
+Centre Bell,2012,27,15,55.56,2.81,2.59,5.56
+Soldier Field,2013,1,1,100.0,5.0,1.0,50.0
+American Airlines Center,2010,41,22,53.66,2.85,2.46,3.66
+Honda Center,2011,40,20,50.0,2.9,2.85,0.0
+BankAtlantic Center,2011,45,23,51.11,2.62,2.47,1.11
+Verizon Center,2011,47,29,61.7,2.79,2.45,11.7
+MTS Centre,2011,41,23,56.1,2.98,2.51,6.1
+Air Canada Centre,2011,41,18,43.9,2.63,3.07,-6.1
+Xcel Energy Center,2011,41,20,48.78,2.44,2.63,-1.22
+United Center,2011,44,27,61.36,3.23,2.8,11.36
+McMahon Stadium,2010,1,1,100.0,4.0,0.0,50.0
+Hartwall Areena,2010,2,1,50.0,2.5,2.5,0.0
+Scottrade Center,2009,40,17,42.5,2.58,2.8,-7.5
+HP Pavilion at San Jose,2009,41,27,65.85,3.46,2.44,15.85
+Prudential Center,2009,41,27,65.85,3.02,2.17,15.85
+Madison Square Garden,2008,40,25,62.5,2.8,2.33,12.5
+Scotiabank Place,2008,40,22,55.0,2.95,2.65,5.0
+RBC Center,2008,41,26,63.41,2.85,2.59,13.41
+O2 Czech Republic,2008,2,1,50.0,1.5,1.5,0.0
+Honda Center,2007,40,27,67.5,2.78,2.17,17.5
+Mellon Arena,2007,41,26,63.41,3.32,2.37,13.41
+Verizon Center,2007,41,23,56.1,3.1,2.68,6.1
+Air Canada Centre,2007,41,18,43.9,2.95,3.59,-6.1
+BankAtlantic Center,2007,41,18,43.9,2.68,2.78,-6.1
+United Center,2007,41,23,56.1,3.12,2.49,6.1
+Xcel Energy Center,2007,41,25,60.98,2.78,2.22,10.98
+RBC Center,2006,41,21,51.22,3.12,3.2,1.22
+Madison Square Garden,2006,41,21,51.22,3.1,2.61,1.22
+Scotiabank Place,2006,41,25,60.98,3.56,2.44,10.98
+Staples Center,2002,39,19,48.72,2.69,2.67,-1.28
+Skyreach Centre,2002,36,20,55.56,2.81,2.64,5.56
+Pepsi Center,2002,33,21,63.64,3.39,2.33,13.64
+Nationwide Arena,2002,36,20,55.56,2.78,2.47,5.56
+HP Pavilion at San Jose,2003,34,24,70.59,2.91,1.97,20.59
+MCI Center,2003,35,13,37.14,2.43,3.06,-12.86
+Arrowhead Pond,2003,34,19,55.88,2.88,2.68,5.88
+Glendale Arena,2003,34,11,32.35,2.44,3.53,-17.65
+Rexall Place,2005,41,20,48.78,3.17,3.12,-1.22
+Nassau Coliseum,2005,41,20,48.78,2.78,3.37,-1.22
+Pengrowth Saddledome,2000,32,12,37.5,2.5,2.97,-12.5
+FleetCenter,2000,36,21,58.33,3.03,2.75,8.33
+Gaylord Entertainment Center,2000,34,16,47.06,2.18,2.47,-2.94
+Arrowhead Pond,2001,36,15,41.67,2.33,2.56,-8.33
+MCI Center,2001,35,21,60.0,3.09,2.69,10.0
+Rogers Arena                                                    ,2014,1,0,0.0,1.0,2.0,-50.0
+Bridgestone Arena,2019,70,34,48.57,2.94,3.11,-1.43
+TD Garden,2019,70,44,62.86,3.37,2.54,12.86
+Ericsson Globe,2019,4,2,50.0,3.5,3.0,0.0
+Little Caesars Arena,2018,82,34,41.46,2.88,3.17,-8.54
+American Airlines Center,2018,94,54,57.45,2.85,2.3,7.45
+Scandinavium,2018,2,2,100.0,5.0,2.0,50.0
+Barclays Center,2018,44,24,54.55,3.0,2.41,4.55
+MTS Centre,2015,41,18,43.9,2.73,2.88,-6.1
+Gila River Arena,2017,41,16,39.02,2.49,2.88,-10.98
+Honda Center,2015,45,26,57.78,2.78,2.13,7.78
+Amalie Arena,2015,50,31,62.0,2.96,2.42,12.0
+Bridgestone Arena,2016,52,33,63.46,3.17,2.31,13.46
+TD Garden,2016,44,23,52.27,2.8,2.45,2.27
+Scottrade Center,2017,41,24,58.54,2.8,2.54,8.54
+Prudential Center,2017,43,24,55.81,3.0,2.77,5.81
+SAP Center at San Jose,2017,46,28,60.87,3.35,2.52,10.87
+Verizon Center,2015,47,33,70.21,3.04,2.17,20.21
+Air Canada Centre,2015,41,14,34.15,2.71,2.95,-15.85
+United Center,2015,44,27,61.36,2.98,2.14,11.36
+Xcel Energy Center,2015,43,21,48.84,2.72,2.44,-1.16
+Canadian Tire Centre,2017,39,14,35.9,3.03,3.85,-14.1
+Honda Center,2014,50,33,66.0,2.98,2.58,16.0
+MTS Centre,2014,43,23,53.49,3.12,2.6,3.49
+Amalie Arena,2014,54,38,70.37,3.22,2.39,20.37
+United Center,2014,52,33,63.46,2.94,2.23,13.46
+Verizon Center,2014,46,27,58.7,2.98,2.24,8.7
+Xcel Energy Center,2014,46,24,52.17,3.0,2.52,2.17
+Air Canada Centre,2014,41,22,53.66,3.22,3.12,3.66
+Jobing.com Arena,2012,24,14,58.33,3.08,2.58,8.33
+SAP Center at San Jose,2013,45,31,68.89,3.29,2.24,18.89
+Scottrade Center,2013,44,30,68.18,3.39,2.41,18.18
+Canadian Tire Centre,2013,41,18,43.9,2.88,3.32,-6.1
+Prudential Center,2013,40,21,52.5,2.55,2.13,2.5
+Nationwide Arena,2012,24,14,58.33,2.67,2.13,8.33
+Staples Center,2012,33,27,81.82,2.94,1.7,31.82
+Rogers Arena,2012,26,15,57.69,2.81,2.31,7.69
+Pepsi Center,2012,24,12,50.0,2.71,2.83,0.0
+BC Place,2013,1,0,0.0,2.0,4.0,-50.0
+Yankee Stadium,2013,2,0,0.0,2.0,4.5,-50.0
+Verizon Center,2010,46,28,60.87,2.93,2.37,10.87
+United Center,2010,44,26,59.09,3.3,2.64,9.09
+American Airlines Center,2011,41,22,53.66,2.73,2.76,3.66
+Air Canada Centre,2010,41,18,43.9,2.68,2.9,-6.1
+Xcel Energy Center,2010,40,19,47.5,2.55,2.85,-2.5
+Honda Center,2010,44,27,61.36,3.09,2.75,11.36
+BankAtlantic Center,2010,41,16,39.02,2.56,2.68,-10.98
+Hartwall Areena,2011,1,1,100.0,4.0,1.0,50.0
+TD Garden,2009,40,17,42.5,2.5,2.55,-7.5
+Rexall Place,2009,41,18,43.9,2.9,3.22,-6.1
+Nassau Coliseum,2009,41,23,56.1,3.05,2.78,6.1
+Bridgestone Arena,2009,12,8,66.67,2.5,2.0,16.67
+Wachovia Center,2008,41,24,58.54,3.68,3.05,8.54
+HSBC Arena,2008,41,23,56.1,3.12,2.73,6.1
+Pengrowth Saddledome,2007,41,21,51.22,2.73,2.46,1.22
+American Airlines Center,2007,41,23,56.1,3.02,2.34,6.1
+Wachovia Center,2006,41,10,24.39,2.8,3.71,-25.61
+HSBC Arena,2006,41,28,68.29,4.05,3.02,18.29
+Joe Louis Arena,2002,36,28,77.78,3.78,2.28,27.78
+St. Pete Times Forum,2002,34,22,64.71,3.09,2.47,14.71
+General Motors Place,2002,35,22,62.86,3.43,2.54,12.86
+Continental Airlines Arena,2002,38,25,65.79,2.97,2.03,15.79
+Centre Bell,2002,36,16,44.44,2.81,3.14,-5.56
+Philips Arena,2002,37,15,40.54,2.7,3.3,-9.46
+Rexall Place,2003,37,22,59.46,3.11,2.54,9.46
+Nassau Coliseum,2003,37,25,67.57,3.32,2.32,17.57
+Glendale Arena,2005,41,19,46.34,3.2,3.34,-3.66
+HP Pavilion at San Jose,2005,41,25,60.98,3.46,2.73,10.98
+Arrowhead Pond,2005,41,26,63.41,3.59,2.83,13.41
+TD Banknorth Garden,2005,41,16,39.02,2.8,3.05,-10.98
+Mellon Arena,2000,39,24,61.54,3.54,3.1,11.54
+Xcel Energy Center,2000,31,14,45.16,2.32,2.55,-4.84
+Centre Molson,2000,37,15,40.54,2.51,2.89,-9.46
+Corel Centre,2000,36,26,72.22,3.69,2.33,22.22
+America West Arena,2000,34,21,61.76,2.97,2.56,11.76
+Air Canada Centre,2000,34,19,55.88,3.12,2.24,5.88
+United Center,2000,37,14,37.84,2.32,3.11,-12.16
+First Union Center,2001,36,20,55.56,2.83,2.39,5.56
+Ice Palace,2001,36,16,44.44,2.53,2.69,-5.56
+Nassau Coliseum,2001,36,21,58.33,3.08,2.83,8.33
+Bridgestone Arena                                               ,2014,1,0,0.0,3.0,4.0,-50.0
+Scotiabank Arena,2019,175,84,48.0,2.62,2.94,-2.0
+Enterprise Center,2019,70,46,65.71,3.26,2.43,15.71
+Prudential Center,2019,68,26,38.24,3.0,3.35,-11.76
+NYCB Live/Nassau Coliseum,2019,48,26,54.17,3.21,2.92,4.17
+SAP Center at San Jose,2019,72,34,47.22,2.89,3.06,-2.78
+Canadian Tire Centre,2019,74,36,48.65,3.08,3.11,-1.35
+Gila River Arena,2019,66,34,51.52,3.15,2.55,1.52
+Falcon Stadium,2019,2,0,0.0,1.0,3.0,-50.0
+Amalie Arena,2018,86,64,74.42,4.0,2.6,24.42
+Xcel Energy Center,2018,82,32,39.02,2.56,2.9,-10.98
+United Center,2018,80,38,47.5,3.48,3.38,-2.5
+Honda Center,2018,82,38,46.34,2.68,2.88,-3.66
+Rogers Place,2018,82,36,43.9,3.02,3.24,-6.1
+STAPLES Center,2016,41,23,56.1,2.8,2.59,6.1
+Bell MTS Place,2017,50,37,74.0,3.7,2.42,24.0
+Centre Bell,2017,41,18,43.9,2.83,2.85,-6.1
+Scotiabank Saddledome,2017,41,17,41.46,2.66,3.17,-8.54
+First Niagara Center,2015,41,16,39.02,2.37,2.73,-10.98
+Rogers Arena,2016,41,18,43.9,2.17,2.8,-6.1
+T-Mobile Arena,2017,51,36,70.59,3.59,2.47,20.59
+Nationwide Arena,2016,43,29,67.44,3.23,2.23,17.44
+Pepsi Center,2016,41,13,31.71,2.34,3.32,-18.29
+Madison Square Garden,2015,43,27,62.79,3.05,2.53,12.79
+BMO Field,2016,1,1,100.0,5.0,4.0,50.0
+Heinz Field,2016,1,1,100.0,4.0,2.0,50.0
+First Niagara Center,2014,41,14,34.15,2.02,2.93,-15.85
+Madison Square Garden,2014,52,31,59.62,2.77,2.35,9.62
+Nationals Park,2014,1,1,100.0,3.0,2.0,50.0
+Levi's Stadium,2014,1,0,0.0,1.0,2.0,-50.0
+TD Garden,2012,36,24,66.67,2.94,2.14,16.67
+Nassau Coliseum,2012,27,11,40.74,3.0,3.19,-9.26
+Scotiabank Saddledome,2013,41,19,46.34,2.73,2.93,-3.66
+Bridgestone Arena,2012,24,11,45.83,2.46,2.46,-4.17
+Centre Bell,2013,49,28,57.14,2.57,2.31,7.14
+CONSOL Energy Center,2012,32,23,71.88,3.31,2.22,21.88
+Rexall Place,2012,24,9,37.5,2.54,2.96,-12.5
+Joe Louis Arena,2013,42,18,42.86,2.55,2.93,-7.14
+Tampa Bay Times Forum,2012,24,12,50.0,3.42,2.88,0.0
+Madison Square Garden,2010,43,21,48.84,3.09,2.49,-1.16
+RBC Center,2010,40,21,52.5,3.1,2.83,2.5
+O2 Czech Republic,2010,2,0,0.0,1.0,4.0,-50.0
+Wells Fargo Center,2011,46,25,54.35,3.48,3.13,4.35
+Scotiabank Place,2010,41,16,39.02,2.29,2.85,-10.98
+PNC Arena,2011,5,3,60.0,2.0,2.2,10.0
+Nationwide Arena,2009,41,20,48.78,2.71,2.71,-1.22
+Pepsi Center,2009,41,24,58.54,3.07,2.54,8.54
+Staples Center,2009,41,22,53.66,3.1,2.73,3.66
+Jobing.com Arena,2009,41,29,70.73,3.12,2.46,20.73
+Sommet Center,2009,29,16,55.17,2.69,2.66,5.17
+Pengrowth Saddledome,2008,41,27,65.85,3.59,2.68,15.85
+American Airlines Center,2008,41,20,48.78,2.95,2.98,-1.22
+Wrigley Field,2008,1,0,0.0,4.0,6.0,-50.0
+HSBC Arena,2007,40,20,50.0,3.48,3.03,0.0
+Wachovia Center,2007,41,21,51.22,3.1,2.83,1.22
+American Airlines Center,2006,41,28,68.29,2.9,2.41,18.29
+Pengrowth Saddledome,2006,41,30,73.17,3.51,2.24,23.17
+Gaylord Entertainment Center,2006,35,25,71.43,3.91,2.57,21.43
+HP Pavilion at San Jose,2002,36,17,47.22,2.83,2.78,-2.78
+MCI Center,2002,39,24,61.54,3.13,2.82,11.54
+Arrowhead Pond,2002,34,22,64.71,2.65,2.03,14.71
+Nationwide Arena,2003,37,17,45.95,2.38,2.51,-4.05
+Staples Center,2003,32,15,46.88,2.81,2.59,-3.12
+Pepsi Center,2003,35,19,54.29,2.49,1.94,4.29
+Continental Airlines Arena,2005,41,27,65.85,3.05,2.56,15.85
+Joe Louis Arena,2005,41,27,65.85,3.61,2.56,15.85
+General Motors Place,2005,41,25,60.98,3.56,3.0,10.98
+Philips Arena,2005,41,24,58.54,3.63,3.29,8.54
+Centre Bell,2005,41,24,58.54,3.1,2.8,8.54
+St. Pete Times Forum,2005,41,25,60.98,3.05,3.12,10.98
+Madison Square Garden,2000,38,17,44.74,3.05,3.34,-5.26
+Compaq Center at San Jose,2001,38,25,65.79,3.34,2.24,15.79
+Nationwide Arena,2001,36,14,38.89,2.25,3.19,-11.11
+Skyreach Centre,2001,37,23,62.16,2.81,2.11,12.16
+Staples Center,2001,35,22,62.86,2.6,1.91,12.86
+Entertainment and Sports Arena,2001,30,15,50.0,2.63,2.87,0.0
+Pepsi Center,2001,37,24,64.86,2.76,1.97,14.86
+T-Mobile Arena,2019,74,44,59.46,3.41,3.0,9.46
+Scotiabank Saddledome,2019,66,32,48.48,3.12,3.39,-1.52
+Centre Bell,2019,74,28,37.84,2.78,3.16,-12.16
+Bell MTS Place,2019,72,38,52.78,2.94,2.72,2.78
+Capital One Arena,2018,90,54,60.0,3.44,2.69,10.0
+KeyBank Center,2018,82,42,51.22,2.98,3.15,1.22
+Madison Square Garden,2018,82,36,43.9,2.83,2.85,-6.1
+Hartwall Arena,2018,4,0,0.0,2.0,4.0,-50.0
+Honda Center,2017,43,26,60.47,3.0,2.53,10.47
+Prudential Center,2015,41,19,46.34,2.24,2.46,-3.66
+Xcel Energy Center,2017,43,28,65.12,3.33,2.19,15.12
+Barclays Center,2016,41,22,53.66,3.12,2.9,3.66
+SAP Center at San Jose,2015,53,26,49.06,2.91,2.6,-0.94
+Air Canada Centre,2017,44,31,70.45,3.45,2.61,20.45
+United Center,2017,41,18,43.9,2.9,2.73,-6.1
+Rogers Place,2017,41,19,46.34,2.95,3.44,-3.66
+American Airlines Center,2016,41,22,53.66,3.17,2.88,3.66
+Gila River Arena,2015,41,22,53.66,2.98,2.76,3.66
+Canadian Tire Centre,2015,41,21,51.22,2.9,2.66,1.22
+Scottrade Center,2015,51,28,54.9,2.59,2.43,4.9
+Amalie Arena,2017,51,35,68.63,3.51,2.96,18.63
+Citi Field,2017,1,0,0.0,2.0,3.0,-50.0
+Gila River Arena,2014,41,11,26.83,1.9,3.24,-23.17
+Canadian Tire Centre,2014,44,24,54.55,3.14,2.8,4.55
+SAP Center at San Jose,2014,40,19,47.5,2.83,2.83,-2.5
+Scottrade Center,2014,44,28,63.64,3.02,2.36,13.64
+Prudential Center,2014,41,19,46.34,2.22,2.2,-3.66
+Honda Center,2013,48,33,68.75,3.4,2.38,18.75
+Xcel Energy Center,2013,47,31,65.96,2.74,2.11,15.96
+Air Canada Centre,2013,41,24,58.54,3.2,3.07,8.54
+Wells Fargo Center,2012,24,15,62.5,2.92,2.67,12.5
+BB&T Center,2012,24,8,33.33,2.71,3.38,-16.67
+United Center,2013,50,34,68.0,3.48,2.4,18.0
+PNC Arena,2012,24,9,37.5,2.79,3.46,-12.5
+Verizon Center,2013,41,21,51.22,2.9,2.85,1.22
+MTS Centre,2013,41,18,43.9,3.05,3.12,-6.1
+The Big House,2013,1,0,0.0,2.0,3.0,-50.0
+Scottrade Center,2010,41,23,56.1,2.95,2.59,6.1
+Prudential Center,2010,41,22,53.66,2.29,2.46,3.66
+Bridgestone Arena,2011,46,29,63.04,2.89,2.39,13.04
+Rexall Place,2011,41,18,43.9,2.63,2.76,-6.1
+Tampa Bay Times Forum,2011,26,15,57.69,3.15,3.23,7.69
+HP Pavilion at San Jose,2010,49,30,61.22,3.02,2.53,11.22
+CONSOL Energy Center,2011,44,30,68.18,3.68,2.66,18.18
+Nassau Coliseum,2011,41,17,41.46,2.54,3.0,-8.54
+TD Garden,2011,45,25,55.56,3.13,2.22,5.56
+Ericsson Globe,2011,2,2,100.0,2.5,1.5,50.0
+American Airlines Center,2009,41,23,56.1,3.15,2.9,6.1
+Pengrowth Saddledome,2009,41,20,48.78,2.32,2.39,-1.22
+Hartwall Areena,2009,2,0,0.0,1.5,4.0,-50.0
+Sommet Center,2008,41,24,58.54,2.83,2.54,8.54
+Pepsi Center,2008,41,18,43.9,2.61,3.05,-6.1
+Jobing.com Arena,2008,41,23,56.1,2.78,2.85,6.1
+Nationwide Arena,2008,41,25,60.98,2.71,2.63,10.98
+Staples Center,2008,41,18,43.9,2.83,2.88,-6.1
+Rexall Place,2007,41,23,56.1,3.0,2.8,6.1
+Nassau Coliseum,2007,41,18,43.9,2.17,2.68,-6.1
+Pepsi Center,2006,41,22,53.66,3.22,3.02,3.66
+Staples Center,2006,41,16,39.02,2.83,3.15,-10.98
+Nationwide Arena,2006,41,18,43.9,2.71,3.07,-6.1
+Jobing.com Arena,2006,37,17,45.95,3.05,3.3,-4.05
+Madison Square Garden,2002,37,17,45.95,2.51,2.7,-4.05
+RBC Center,2002,32,12,37.5,2.09,2.66,-12.5
+American Airlines Center,2003,33,26,78.79,3.0,1.76,28.79
+Gaylord Entertainment Center,2003,34,22,64.71,2.88,2.32,14.71
+FleetCenter,2003,32,18,56.25,2.22,2.38,6.25
+Pengrowth Saddledome,2003,36,21,58.33,2.25,2.03,8.33
+Mellon Arena,2005,41,12,29.27,3.24,3.8,-20.73
+Xcel Energy Center,2005,41,23,56.1,3.15,2.59,6.1
+Air Canada Centre,2005,41,26,63.41,3.59,3.15,13.41
+BankAtlantic Center,2005,41,25,60.98,3.12,2.73,10.98
+Verizon Center,2005,41,16,39.02,3.07,3.54,-10.98
+United Center,2005,41,16,39.02,2.66,3.1,-10.98
+Arrowhead Pond,2000,37,15,40.54,2.3,2.97,-9.46
+MCI Center,2000,35,24,68.57,3.34,2.46,18.57
+FleetCenter,2001,39,23,58.97,3.13,2.56,8.97
+American Airlines Center,2001,35,18,51.43,2.51,2.54,1.43
+Gaylord Entertainment Center,2001,33,17,51.52,2.52,2.33,1.52
+Pengrowth Saddledome,2001,36,20,55.56,2.5,2.42,5.56
+Centre Bell                                                     ,2014,1,1,100.0,4.0,3.0,50.0
+Rogers Place,2019,216,101,46.76,2.98,3.12,-3.24
+Amalie Arena,2019,66,42,63.64,3.85,2.73,13.64
+Honda Center,2019,72,32,44.44,2.67,2.97,-5.56
+United Center,2019,68,32,47.06,2.97,3.0,-2.94
+Xcel Energy Center,2019,70,38,54.29,3.14,2.89,4.29
+Scotiabank Arena,2018,88,48,54.55,3.52,3.07,4.55
+SAP Center at San Jose,2018,104,64,61.54,3.6,2.94,11.54
+Canadian Tire Centre,2018,82,36,43.9,3.05,3.05,-6.1
+Enterprise Center,2018,108,60,55.56,3.13,3.02,5.56
+Gila River Arena,2018,82,40,48.78,2.71,2.46,-1.22
+Prudential Center,2018,80,38,47.5,2.83,2.8,-2.5
+NYCB Live/Nassau Coliseum,2018,46,28,60.87,2.61,2.17,10.87
+Notre Dame Stadium,2018,2,0,0.0,2.0,4.0,-50.0
+KeyBank Center,2017,40,11,27.5,2.23,3.4,-22.5
+Wells Fargo Center,2016,41,25,60.98,3.0,2.56,10.98
+Capital One Arena,2017,51,33,64.71,3.37,2.57,14.71
+Scotiabank Saddledome,2015,41,21,51.22,3.15,3.05,1.22
+PNC Arena,2016,41,23,56.1,2.68,2.61,6.1
+Madison Square Garden,2017,41,21,51.22,3.07,3.1,1.22
+PPG Paints Arena,2016,53,40,75.47,3.77,2.45,25.47
+BB&T Center,2016,41,19,46.34,2.71,2.93,-3.66
+Joe Louis Arena,2015,43,23,53.49,2.63,2.47,3.49
+Centre Bell,2015,41,22,53.66,2.56,2.51,3.66
+Gillette Stadium,2015,1,0,0.0,1.0,5.0,-50.0
+Investors Group Field,2016,1,0,0.0,0.0,3.0,-50.0
+Navy-Marine Corps Memorial Stadium,2017,1,1,100.0,5.0,2.0,50.0
+Centre Bell,2014,46,28,60.87,2.85,2.35,10.87
+Scotiabank Saddledome,2014,46,27,58.7,3.15,2.67,8.7
+Joe Louis Arena,2014,44,23,52.27,2.93,2.52,2.27
+First Niagara Center,2013,41,13,31.71,2.17,2.98,-18.29
+American Airlines Center,2012,24,11,45.83,2.71,3.08,-4.17
+Madison Square Garden,2013,53,27,50.94,2.45,2.21,0.94
+Jobing.com Arena,2011,50,26,52.0,2.6,2.5,2.0
+Nationwide Arena,2011,41,17,41.46,2.59,2.85,-8.54
+Centre Bell,2010,44,25,56.82,2.75,2.45,6.82
+Staples Center,2011,48,27,56.25,2.42,1.88,6.25
+Scotiabank Saddledome,2010,40,22,55.0,3.28,2.93,5.0
+Philips Arena,2010,41,17,41.46,2.59,2.95,-8.54
+St. Pete Times Forum,2010,49,30,61.22,3.35,2.73,11.22
+Pepsi Center,2011,41,22,53.66,2.49,2.54,3.66
+Rogers Arena,2011,44,27,61.36,3.05,2.45,11.36
+Joe Louis Arena,2010,46,25,54.35,3.2,3.09,4.35
+Wachovia Center,2009,41,24,58.54,3.02,2.54,8.54
+HSBC Arena,2009,41,25,60.98,3.05,2.34,10.98
+Rexall Place,2008,41,18,43.9,2.66,2.78,-6.1
+Nassau Coliseum,2008,41,17,41.46,2.73,3.15,-8.54
+Ericsson Globe,2008,2,0,0.0,2.0,3.5,-50.0
+Pepsi Center,2007,41,27,65.85,3.15,2.51,15.85
+Sommet Center,2007,41,23,56.1,2.93,2.76,6.1
+Staples Center,2007,40,16,40.0,3.1,3.28,-10.0
+Jobing.com Arena,2007,41,17,41.46,2.71,3.0,-8.54
+Nationwide Arena,2007,41,20,48.78,2.56,2.59,-1.22
+Ralph Wilson Stadium,2007,1,0,0.0,1.0,2.0,-50.0
+Rexall Place,2006,41,19,46.34,2.78,3.1,-3.66
+Nassau Coliseum,2006,41,22,53.66,2.9,2.51,3.66
+Air Canada Centre,2002,37,24,64.86,3.0,2.41,14.86
+United Center,2002,34,17,50.0,2.56,2.62,0.0
+Mellon Arena,2002,39,15,38.46,2.41,3.26,-11.54
+Xcel Energy Center,2002,38,25,65.79,2.71,1.95,15.79
+America West Arena,2002,35,17,48.57,2.54,2.8,-1.43
+Office Depot Center,2002,34,8,23.53,1.79,3.18,-26.47
+Corel Centre,2002,38,28,73.68,3.37,2.0,23.68
+HSBC Arena,2003,37,21,56.76,3.24,2.76,6.76
+Wachovia Center,2003,38,24,63.16,3.0,2.13,13.16
+Savvis Center,2003,34,23,67.65,2.74,2.41,17.65
+Madison Square Garden,2005,41,25,60.98,3.07,2.29,10.98
+RBC Center,2005,41,31,75.61,3.73,3.1,25.61
+Scotiabank Place,2005,41,29,70.73,4.0,2.34,20.73
+Joe Louis Arena,2000,38,27,71.05,3.34,2.47,21.05
+General Motors Place,2000,36,21,58.33,3.22,2.92,8.33
+Continental Airlines Arena,2000,35,24,68.57,3.8,2.29,18.57
+Philips Arena,2000,35,10,28.57,2.6,3.74,-21.43
+San Jose Arena,2000,37,22,59.46,2.89,2.49,9.46
+Reunion Arena,2000,36,26,72.22,3.36,2.06,22.22
+National Car Rental Center,2000,34,12,35.29,2.35,2.94,-14.71
+HSBC Arena,2001,36,20,55.56,2.78,2.28,5.56
+Savvis Center,2001,40,27,67.5,3.1,2.2,17.5
+Madison Square Garden,2019,72,36,50.0,3.42,3.25,0.0
+O2 Czech Republic,2019,2,2,100.0,4.0,3.0,50.0
+KeyBank Center,2019,68,40,58.82,3.18,2.88,8.82
+Capital One Arena,2019,66,36,54.55,3.42,3.18,4.55
+T-Mobile Arena,2018,88,52,59.09,3.27,2.41,9.09
+Scotiabank Saddledome,2018,88,54,61.36,3.93,3.07,11.36
+Bell MTS Place,2018,86,50,58.14,3.6,2.86,8.14
+Centre Bell,2018,82,50,60.98,3.32,2.68,10.98

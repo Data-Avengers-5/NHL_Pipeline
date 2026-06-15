@@ -3,7 +3,7 @@ import duckdb
 from pathlib import Path
 
 # ── Paths ──────────────────────────────────────────────
-DATA_DIR = Path(__file__).parent.parent / "data"
+DATA_DIR = Path(__file__).parent.parent / "data" / "raw"
 DB_PATH  = Path(__file__).parent.parent / "nhl_raw.duckdb"
 
 # ── Connect to DuckDB ──────────────────────────────────
