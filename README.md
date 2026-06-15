@@ -79,7 +79,9 @@ NHL_Pipeline/
 │   └── table_relationships.JPG         # ERD
 ├── python/
 │   ├── ingest.py                       # Polars: CSV → DuckDB bronze layer
-│   └── export_marts.py                 # Gold marts → data/exports/
+│   ├── export_marts.py                 # Gold marts → data/exports/ (5 mart CSVs for Power BI)
+│   ├── export_rolling.py               # Rolling 3-year win-rate + trajectory classification (Call 5)
+│   └── export_trajectory_change.py     # 2017→2019 trajectory delta table (Call 5 infographic)
 ├── nhl_dbt/
 │   ├── dbt_project.yml
 │   └── models/
@@ -97,8 +99,6 @@ NHL_Pipeline/
 │           ├── mart_team_traject.sql
 │           └── schema.yml
 ├── notebooks/                          # Exploratory Jupyter notebooks
-├── export_rolling.py                   # Helper: rolling-window trajectory export
-├── export_trajectory_change.py         # Helper: year-over-year trajectory change
 ├── full_validation.md                  # Verified outputs for all 5 calls
 ├── NHL_Dashboard.pbix                  # Final Power BI file
 ├── NHL_Dashboard.pdf                   # PDF export of the dashboard
