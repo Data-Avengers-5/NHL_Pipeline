@@ -32,7 +32,7 @@ Every row is loaded as-is. No transformations at this stage. This preserves the 
 
 Three of the staging models (`stg_game_plays`, `stg_game_penalties`, `stg_game_skater_stats`) apply `QUALIFY ROW_NUMBER() OVER (PARTITION BY <pk> ORDER BY ...) = 1` to deduplicate rows discovered in the 2018–2019 raw data. Before this fix, goal-event counts for 2018 were roughly double what they should have been (33,000 vs 16,500 expected).
 
-`stg_game_plays` filters to 6 event types — Goal, Shot, Missed Shot, Blocked Shot, Hit, Takeaway — retaining everything needed for the business questions while reducing volume.
+`stg_game_plays` filters to 6 event types — Goal, Shot, Missed Shot, Blocked Shot, Penalty, Takeaway — retaining everything needed for the business questions while reducing volume.
 
 ### Step 3 — Transform to Gold (Silver → dims + facts + marts)
 
