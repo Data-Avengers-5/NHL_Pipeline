@@ -9,6 +9,6 @@ SELECT
     ROUND(AVG(ts.goals), 2)                                             AS avg_goals_for,
     ROUND(AVG(ts.shots), 2)                                             AS avg_shots    
 FROM {{ ref('stg_game') }} AS g
-LEFT JOIN {{ ref('stg_game_teams_stats') }}                             AS ts
+LEFT JOIN {{ ref('fct_game_teams_stats') }}                             AS ts
 ON g.game_id = ts.game_id
 GROUP BY ts.team_id, g.season_year
