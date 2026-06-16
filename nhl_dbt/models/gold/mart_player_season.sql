@@ -15,7 +15,7 @@ WITH player_season AS (
         SUM(s.time_on_ice)                                  AS total_toi_seconds,
         SUM(s.even_time_on_ice)                             AS total_even_toi_seconds
     FROM {{ ref('stg_game_skater_stats') }} s
-    LEFT JOIN {{ ref('stg_game') }} g
+    LEFT JOIN {{ ref('dim_game') }} g
         ON s.game_id = g.game_id
     WHERE g.season_year IS NOT NULL
     GROUP BY s.player_id, g.season_year
@@ -27,7 +27,7 @@ player_ages AS (
         FLOOR(
             DATEDIFF('day', CAST(birth_date AS DATE), DATE '2019-12-31') / 365.25
         )                                                   AS age_at_end_of_dataset
-    FROM {{ ref('stg_player_info') }}
+    FROM {{ ref('dim_player') }}
 )
 SELECT
     ps.player_id,
@@ -44,16 +44,13 @@ SELECT
     ps.total_plus_minus,
     ps.total_toi_seconds,
     pa.age_at_end_of_dataset,
-    -- veteran flag: age >= 35 at end of dataset (2019-12-31)
     CASE
         WHEN pa.age_at_end_of_dataset >= 35 THEN true
         ELSE false
     END                                                     AS is_veteran,
-    -- points per 60 minutes
     ROUND(
         ps.total_points * 3600.0 / NULLIF(ps.total_toi_seconds, 0), 2
     )                                                       AS points_per_60,
-    -- underused flag: high impact but low ice time relative to peers
     CASE
         WHEN ps.games_played >= 10
             AND ROUND(ps.total_points * 3600.0 / NULLIF(ps.total_toi_seconds, 0), 2)
