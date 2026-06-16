@@ -9,21 +9,23 @@ The data pipeline that runs a hockey franchise. Five calls. Five million-dollar 
 
 We built a decision engine on 19 years of NHL game data that answers 5 commercial questions a General Manager would actually face — each backed by descriptive analytics and a quantified recommendation.
 
-The pipeline ingests 7 raw CSV files, transforms them through a star schema in DuckDB managed by dbt, and surfaces findings in a dashboard answering the 5 business decisions. A data-quality layer (dbt tests + Soda Core + Elementary) runs throughout, uncovering our headline finding: **41.4% of all NHL goal records are missing coordinate data** — undetected across 19 years of public data.
+The pipeline ingests 7 raw CSV files, transforms them through a star schema in DuckDB managed by dbt, and surfaces findings in a Power BI dashboard. Along the way it uncovered the headline finding: **41.4% of all NHL goal records are missing coordinate data** — a structural defect undetected across 19 years of public data.
 
 ---
 
 ## The 5 Business Decisions
 
-| # | The Call | The Question | The Mart |
-|---|----------|-------------|----------|
-| 1 | **The Trade** | Which undervalued players deliver the most impact per minute of ice time? | `mart_player_season` |
-| 2 | **The Drill** | Which shot zones convert best — where should teams drill? | `mart_shot_zones` |
-| 3 | **The Penalty** | When do penalties actually cost games? | `mart_penalty_cost` |
-| 4 | **The Arena** | Where is home-ice advantage largest and smallest? | `mart_venue_advantage` |
-| 5 | **The Future** | Which franchises are trending up or down over 19 seasons? | `mart_team_trajectory` |
+| # | The Call        | The Question                                                              | The Mart              |
+| - | --------------- | ------------------------------------------------------------------------- | --------------------- |
+| 1 | **The Trade**   | Which undervalued players deliver the most impact per minute of ice time? | `mart_player_season`  |
+| 2 | **The Drill**   | Which shot zones convert best — where should teams drill?                 | `mart_shot_zones`     |
+| 3 | **The Penalty** | When do penalties actually cost games?                                    | `mart_penalty_cost`   |
+| 4 | **The Arena**   | Where is home-ice advantage largest and smallest?                         | `mart_venue_advtg`    |
+| 5 | **The Future**  | Which franchises are trending up or down over 19 seasons?                 | `mart_team_traject`   |
 
 *Business call → mart → SQL query → quantified recommendation.*
+
+See `NHL_Dashboard.pdf` for the final dashboard and `full_validation.md` for verified query outputs with post-2019 outcome cross-checks.
 
 ---
 
@@ -31,40 +33,33 @@ The pipeline ingests 7 raw CSV files, transforms them through a star schema in D
 
 ```
 7 CSV files (Kaggle)
-        ↓  Polars (extract.py)
-Parquet files (data/raw/)
-        ↓  Python (load_duckdb.py)
-DuckDB — Bronze Layer (raw, immutable)
+        ↓  Polars  (python/ingest.py)
+DuckDB — Bronze Layer  (raw.* — immutable)
         ↓  dbt staging models
-Silver Layer (7 staging views — cleaned, typed)
-        ↓  dbt dims + fact_play
-Dims + Silver Fact (4 dims + fact_play — 5M rows)
-        ↓  dbt mart models
-Gold Layer (5 marts — one per business decision)
-        ↓
-Dashboard (5 decision pages)
+Silver Layer  (7 staging views — deduped, cleaned, typed)
+        ↓  dbt gold models
+Gold Layer  (3 dims + 2 facts + 5 marts — star schema)
+        ↓  Parquet / CSV export  (python/export_marts.py)
+Power BI Desktop Dashboard  (5 decision pages)
 ```
 
-**Data quality runs at every layer:** dbt tests on staging + marts, Soda Core scans, Elementary observability, and CI via GitHub Actions on every PR.
+**Medallion architecture, single DuckDB file.** Bronze loads raw CSVs via Polars. Silver materialises 7 staging views with `QUALIFY ROW_NUMBER()` deduplication to resolve duplicate rows discovered in three 2018–2019 raw tables. Gold materialises a star schema of dims and facts plus 5 purpose-built marts, one per business call.
 
 ---
 
 ## Tech Stack
 
-| Layer | Tool |
-|-------|------|
-| Language | Python 3.11 |
-| Ingestion | Polars |
-| Storage | DuckDB |
+| Layer          | Tool                  |
+| -------------- | --------------------- |
+| Language       | Python 3.11           |
+| Ingestion      | Polars                |
+| Storage        | DuckDB                |
 | Transformation | dbt-core + dbt-duckdb |
-| Data Quality | dbt tests + Soda Core |
-| Observability | Elementary Data |
-| Linting | Ruff (Python), SQLFluff (SQL) |
-| Git hooks | pre-commit |
-| CI/CD | GitHub Actions |
-| Dashboard | Power BI Web (app.powerbi.com) |
+| Data Quality   | dbt tests             |
+| CI/CD          | GitHub Actions        |
+| Dashboard      | Power BI Desktop      |
 
-*All tools are free, open-source, and Python-native. No vendor lock-in. No licensing fees.*
+All tools are free, open-source (or free tier), and Python-native. No vendor lock-in, no licensing fees. DuckDB's ANSI SQL ports to Snowflake or BigQuery with minimal rework if scaled up.
 
 ---
 
@@ -73,36 +68,41 @@ Dashboard (5 decision pages)
 ```
 NHL_Pipeline/
 ├── README.md
-├── requirements.txt               # Pinned dependencies
-├── .github/workflows/ci.yml       # dbt compile runs on every PR
-├── data/                          # CSVs go here (gitignored) — download from Kaggle
-│   └── .gitkeep
+├── requirements.txt                    # Pinned dependencies
+├── .github/workflows/ci.yml            # dbt compile runs on every PR
+├── data/
+│   ├── (raw CSVs gitignored — download from Kaggle)
+│   └── exports/                        # Mart exports for Power BI
 ├── docs/
-│   ├── architecture.md            # Pipeline design and tool decisions
-│   ├── findings.md                # The 41% story + data quality findings
-│   ├── validation_samples.md      # 5 business queries with quantified recommendations
-│   └── table_relationships.JPG    # ERD
+│   ├── architecture.md                 # Pipeline design and tool decisions
+│   ├── findings.md                     # The 41% story + data quality findings
+│   └── table_relationships.JPG         # ERD
 ├── python/
-│   └── ingest.py                  # Polars: CSV → DuckDB bronze layer
+│   ├── ingest.py                       # Polars: CSV → DuckDB bronze layer
+│   ├── export_marts.py                 # Gold marts → data/exports/ (5 mart CSVs for Power BI)
+│   ├── export_rolling.py               # Rolling 3-year win-rate + trajectory classification (Call 5)
+│   └── export_trajectory_change.py     # 2017→2019 trajectory delta table (Call 5 infographic)
 ├── nhl_dbt/
 │   ├── dbt_project.yml
-│   ├── models/
-│   │   ├── staging/               # 7 staging views (silver layer)
-│   │   └── gold/                  # dims, facts, 5 marts
-│   │       ├── dim_game.sql
-│   │       ├── dim_player.sql
-│   │       ├── dim_team.sql
-│   │       ├── fct_play.sql
-│   │       ├── fct_game_teams_stats.sql
-│   │       ├── mart_player_season.sql
-│   │       ├── mart_shot_zones.sql
-│   │       ├── mart_penalty_cost.sql
-│   │       ├── mart_venue_advtg.sql
-│   │       ├── mart_team_traject.sql
-│   │       └── schema.yml
-│   └── profiles.yml               # local only — not committed
-└── soda/
-    └── checks.yml                 # Soda Core data quality checks
+│   └── models/
+│       ├── staging/                    # 7 staging views (silver layer)
+│       └── gold/                       # dims, facts, 5 marts
+│           ├── dim_game.sql
+│           ├── dim_player.sql
+│           ├── dim_team.sql
+│           ├── fct_play.sql
+│           ├── fct_game_teams_stats.sql
+│           ├── mart_player_season.sql
+│           ├── mart_shot_zones.sql
+│           ├── mart_penalty_cost.sql
+│           ├── mart_venue_advtg.sql
+│           ├── mart_team_traject.sql
+│           └── schema.yml
+├── notebooks/                          # Exploratory Jupyter notebooks
+├── full_validation.md                  # Verified outputs for all 5 calls
+├── NHL_Dashboard.pbix                  # Final Power BI file
+├── NHL_Dashboard.pdf                   # PDF export of the dashboard
+└── nhl_all_infographics.pdf            # Decision-page infographics
 ```
 
 ---
@@ -112,121 +112,119 @@ NHL_Pipeline/
 Source: [NHL Game Data — Martin Ellis (Kaggle)](https://www.kaggle.com/martinellis/nhl-game-data)
 Coverage: 2000–2020 · 19 seasons · 23,735 games · 5,050,529 in-game events
 
-| File | Rows | Description | Powers |
-|------|------|-------------|--------|
-| `game.csv` | 23,735 | Game results and metadata | All decisions |
-| `game_teams_stats.csv` | 52,610 | Per-game team statistics | Decisions 4, 5 |
-| `game_skater_stats.csv` | 945,830 | Per-game individual skater stats | Decision 1 |
-| `game_goalie_stats.csv` | ~46,000 | Per-game goalie stats | Supporting |
-| `player_info.csv` | 3,925 | Player metadata | All decisions |
-| `game_plays.csv` | 5,050,529 | Play-by-play events (filtered to 5 event types) | Decisions 2, 3 |
-| `game_penalties.csv` | 247,828 | One row per penalty event | Decision 3 |
+| File                    | Rows      | Description                                     | Powers         |
+| ----------------------- | --------- | ----------------------------------------------- | -------------- |
+| `game.csv`              | 23,735    | Game results and metadata                       | All decisions  |
+| `game_teams_stats.csv`  | 52,610    | Per-game team statistics                        | Decisions 4, 5 |
+| `game_skater_stats.csv` | 945,830   | Per-game individual skater stats                | Decision 1     |
+| `player_info.csv`       | 3,925     | Player metadata                                 | All decisions  |
+| `game_plays.csv`        | 5,050,529 | Play-by-play events (filtered to 6 event types) | Decisions 2, 3 |
+| `game_penalties.csv`    | 247,828   | One row per penalty event                       | Decision 3     |
+| `team_info.csv`         | 33        | Team metadata                                   | All decisions  |
 
-> **Note on `game_plays`:** We filter to 5 event types at ingestion — Goal, Shot, Missed Shot, Blocked Shot, Penalty — reducing file size while retaining everything needed for the business questions.
+> **Note on `game_plays`:** We filter to 6 event types at the staging layer — Goal, Shot, Missed Shot, Blocked Shot, Penalty, Takeaway — retaining everything needed for the business questions while reducing volume.
 
 ---
 
 ## Setup
 
 ### Prerequisites
+
 - Python 3.11
-- Mac or Windows with admin rights
-- Power BI Web at [app.powerbi.com](https://app.powerbi.com)
+- DuckDB-compatible OS (Mac, Linux, or Windows / WSL)
+- Power BI Desktop (Windows) to open the `.pbix` dashboard
 
 ### 1. Clone the repo
+
 ```bash
 git clone https://github.com/Data-Avengers-5/NHL_Pipeline.git
 cd NHL_Pipeline
 ```
 
 ### 2. Install dependencies
+
 ```bash
+python -m venv .venv
+source .venv/bin/activate          # or .venv\Scripts\activate on Windows
 pip install -r requirements.txt
 ```
 
 ### 3. Download the data
-Download the 7 CSV files from [Kaggle](https://www.kaggle.com/martinellis/nhl-game-data) and place them in `data/raw/csv/`.
 
-### 4. Run ingestion
+Download the 7 CSV files from [Kaggle](https://www.kaggle.com/martinellis/nhl-game-data) and place them in `data/`.
+
+### 4. Run bronze ingestion
+
 ```bash
-# Step 1: Convert CSVs to Parquet
-python ingestion/extract.py
-
-# Step 2: Load Parquet files into DuckDB
-python ingestion/load_duckdb.py
+python python/ingest.py
 ```
 
-### 5. Run dbt
+This loads all 7 CSVs into the DuckDB `raw` schema using Polars (10–100× faster than pandas on this volume).
+
+### 5. Run dbt transformations
+
 ```bash
-cd dbt_project
+cd nhl_dbt
 dbt deps
-dbt run
-dbt test
+dbt build
 ```
 
-### 6. Run data quality checks
-```bash
-soda scan -d nhl_duckdb -c soda/configuration.yml soda/checks.yml
-```
+`dbt build` runs all staging and gold models and executes the `not_null` tests on `mart_penalty_cost`. End-to-end pipeline runtime: approximately 2 minutes on a modern laptop.
+
+### 6. View the dashboard
+
+Open `NHL_Dashboard.pbix` in Power BI Desktop. To refresh from your local DuckDB, run `python python/export_marts.py` to regenerate the files under `data/exports/`, then refresh in Power BI.
 
 ---
 
 ## Data Quality
 
-Role 5 owns data quality for this project. Key checks across three independent layers:
+Data quality is enforced through **dbt tests** integrated into the build:
 
-| Layer | Tool | What it checks |
-|-------|------|---------------|
-| Silver | dbt tests | not_null, unique, accepted_values, relationships on all 7 staging models |
-| Gold | dbt tests | Same checks on all 5 mart models |
-| All layers | Soda Core | Row counts, null rates, value ranges |
-| Pipeline | Elementary | Observability — DQ scores per model, lineage, run history |
-| Every PR | GitHub Actions | Full dbt build + tests before any merge |
+| Check type   | Location                         | What it checks                                                        |
+| ------------ | -------------------------------- | --------------------------------------------------------------------- |
+| `not_null`   | `mart_penalty_cost`              | 5 critical columns on the penalty mart                                |
+| Source dedup | Staging layer                    | `QUALIFY ROW_NUMBER()` removes duplicate rows in 2018–2019 raw tables |
+| Schema       | `nhl_dbt/models/gold/schema.yml` | Column types and primary-key uniqueness                               |
 
-**Headline finding:** 41.4% of GOAL events (61,740 of 148,992) are missing x/y rink coordinates. SHOT events are only 0.34% missing. This structural defect is surfaced — not hidden — at three independent quality layers.
+Source data issues — including duplicate rows across three raw tables in the 2018–2019 seasons (which doubled goal-event counts before fixing) — are documented in `docs/findings.md` and resolved at the staging layer rather than masked downstream.
 
----
-
-## Team Roles
-
-| Role | Member | Owns |
-|------|--------|------|
-| Tech Lead / Architect | Kevin | Repo, schema decisions, PR reviews, presentation |
-| Ingestion + Schema Engineer | Zayanah | Polars ingestion, dbt sources, staging models, ERD |
-| Analytics Engineer | Yan Han | dbt marts, business logic SQL, fact_play |
-| Pipeline Engineer | Sid | dbt project structure, CI/CD wiring, GitHub Actions |
-| Data Quality + Documentation Lead | Normasitah | dbt tests, Soda Core, Elementary, documentation |
+**Headline finding:** 41.4% of GOAL events (61,740 of 148,928) are missing x/y rink coordinates. SHOT events are only 0.34% missing. Root cause: NHL only began tracking coordinates in 2007–08; pre-2010 records are 100% missing for both shots and goals. The `mart_shot_zones` mart is therefore scoped to 2010-onwards to avoid era-boundary bias. Full analysis in `docs/findings.md`.
 
 ---
 
 ## CI/CD
 
-GitHub Actions runs `dbt build` + `dbt test` automatically on every pull request to `main`. No PR merges if tests are failing. See `.github/workflows/ci.yml`.
+GitHub Actions runs `dbt compile` on every pull request to `main`, completing in ~40 seconds. This validates that all models parse, `ref()` dependencies resolve, and the DAG is consistent — without requiring the gitignored CSV data to be present on the CI runner. See `.github/workflows/ci.yml`.
+
+Local development uses the full `dbt build` (compile + run + test) once CSVs are downloaded.
 
 ---
 
-## Key Rules
+## Considered but Not Implemented
 
-- **MVP first.** No Phase 2 work merges to `main` until Phase 1 is fully shipped.
-- **Never push directly to `main`.** All changes go through a reviewed PR.
-- **Stuck > 2 hours?** Ask your buddy before end of day.
-- **Done early?** Pair with whoever is most stuck — swarm rule applies.
-- Only the Tech Lead commits changes to `requirements.txt` and `dbt_project.yml`.
+The following tools were evaluated or scaffolded and may feature in future iterations:
+
+- **Soda Core** — YAML checks defined in `soda/checks.yml`; execution deferred to a future iteration
+- **Elementary** — evaluated for dbt-native observability; not implemented within the project timeline
+- **Ruff / SQLFluff / pre-commit hooks** — evaluated as part of the linting strategy; not adopted in this iteration
+
+Including these honestly here rather than in the active stack — the scope call was deliberate.
 
 ---
 
 ## Documentation
 
-Full project documentation in `/docs`:
+Pipeline documentation in `/docs`:
+
 - `architecture.md` — pipeline design, tool decisions, medallion layers
 - `findings.md` — the 41% story, business question answers, recommendations
-- `decisions/` — Architecture Decision Records for key choices
 
----
+Verified outputs and deliverables at the repo root:
 
-## CV Bullet
-
-*"Built production data pipeline (Polars · DuckDB · dbt · Soda Core · Elementary · GitHub Actions). Tested. Observable. Reproducible in 60 seconds on any laptop."*
+- `full_validation.md` — verified SQL outputs for all 5 business calls, with post-2019 outcome cross-checks
+- `NHL_Dashboard.pdf` — final Power BI dashboard export
+- `nhl_all_infographics.pdf` — decision-page infographics
 
 ---
 
