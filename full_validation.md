@@ -1,12 +1,15 @@
 # NHL Pipeline — Full Validation Samples
 
-*Five queries. Five business decisions. All verified against nhl_raw.duckdb (Group_NHL_Pipeline) and cross-checked against real-world outcomes June 2026.*
+*Five queries. Five business decisions. All verified against nhl_raw.duckdb
+(Group_NHL_Pipeline) and cross-checked against real-world outcomes June 2026.*
 
 ---
 
 ## Call 1 — The Trade: Which undervalued players to target?
 
-**Business question:** Which players are being underutilised by their current team and could be acquired at below-market value?
+**Business question:** Which players are producing above league-average efficiency per
+minute while receiving below-average playing time — and could be acquired at
+below-market value?
 
 **Query:**
 ```sql
@@ -15,6 +18,7 @@ SELECT
     p.primary_position,
     m.season_year,
     m.games_played,
+    m.age_at_end_of_dataset,
     ROUND(m.points_per_60, 2)                AS points_per_60,
     ROUND(m.total_toi_seconds / 3600.0, 1)   AS toi_hours
 FROM main_gold.mart_player_season m
@@ -22,46 +26,60 @@ JOIN main_gold.dim_player p ON m.player_id = p.player_id
 WHERE m.is_underused_high_impact = TRUE
 AND   m.season_year >= 2017
 AND   m.games_played >= 41
+AND   m.is_veteran = FALSE
 ORDER BY m.points_per_60 DESC
 LIMIT 10
 ```
 
-**How the flag works:**
-`is_underused_high_impact` flags a player-season TRUE when points_per_60 is above the
-league average for that season AND total_toi_seconds is below the league average for
-that season. The threshold is dynamic — it recalculates every season relative to peers.
-The >=41 game minimum automatically excludes injury-shortened seasons.
+**How the flags work — all data-driven, no external research required:**
+
+`is_underused_high_impact` flags TRUE when both conditions are met for that season:
+- `points_per_60 > AVG(points_per_60) OVER (PARTITION BY season_year)` → above 1.57
+  (league average for qualifying players, 2017-2019)
+- `total_toi_seconds < AVG(total_toi_seconds) OVER (PARTITION BY season_year)` →
+  below 33.74 hours (league average total season TOI for qualifying players, 2017-2019)
+
+`is_veteran` flags TRUE when age >= 35 calculated directly from `birth_date` in
+`player_info.csv`:
+`FLOOR(DATEDIFF('day', CAST(birth_date AS DATE), DATE '2019-12-31') / 365.25) >= 35`
+
+Both flags are computed entirely within the dataset. No external research is required
+to build the shortlist.
 
 **Finding:**
-8 players on the scouting shortlist after removing age-managed veterans (Joe Thornton,
-Jason Spezza). After 2019 cross-check:
 
-| Player | pts/60 | Why flagged | After 2019 | Verdict |
-|--------|--------|-------------|------------|---------|
-| Ryan Spooner | 2.73 | Coaching / inconsistency | Left NHL 2019, now KHL | ❌ Miss |
-| Jesper Bratt | 2.56 | Youth — limited minutes | New Jersey Devils franchise cornerstone, alternate captain, 168G/336A | ✅ Strong |
-| Dominik Kahun | 2.50 | Undrafted player on deep Pittsburgh Penguins roster | 83 career NHL points; now Lausanne HC, Switzerland | ✅ Partial |
-| Austin Wagner | 2.28 | 21-year-old rookie averaging 8:50 ice time with Los Angeles Kings | Reliable bottom-6 forward; now KHL (Shanghai Dragons) | ⚠️ Partial |
-| Paul Byron | 2.28 | Speed/checking role player at Montreal Canadiens | Named alternate captain; 98 career goals, 208 career points | ✅ Strong |
-| Travis Boyd | 2.26 | Suppressed by Washington Capitals roster depth | Career-high 17 goals & 35 points with Arizona Coyotes when given real ice time | ✅ Strong |
-| Evan Rodrigues | 2.24 | Undrafted forward with Buffalo Sabres | Won the Stanley Cup with Colorado Avalanche in 2022; now Florida Panthers | ✅ Strong |
-| Vinnie Hinostroza | 2.18 | 6th-round pick on 13:49 ice time at Chicago Blackhawks | Still active NHL 2025-26 with Florida Panthers; double-digit goals twice | ✅ Partial |
+| Player | Age | Season | Games | pts/60 | TOI hrs | After 2019 | Verdict |
+|--------|-----|--------|-------|--------|---------|------------|---------|
+| Ryan Spooner | 27 | 2017 | 59 | 2.73 | 15.0 | Left NHL 2019, now KHL | ❌ Miss |
+| Jesper Bratt | 21 | 2018 | 51 | 2.56 | 25.8 | NJD franchise cornerstone, alternate captain | ✅ Strong |
+| Dominik Kahun | 24 | 2019 | 56 | 2.50 | 24.8 | 83 NHL points across PIT & EDM; now Lausanne HC | ✅ Partial |
+| Austin Wagner | 22 | 2018 | 62 | 2.28 | 18.5 | Reliable bottom-6; now KHL (Shanghai Dragons) | ⚠️ Partial |
+| Paul Byron | 30 | 2018 | 56 | 2.28 | 27.2 | Named alternate captain at Montreal Canadiens | ✅ Strong |
+| Travis Boyd | 26 | 2018 | 54 | 2.26 | 17.7 | Career-high 17G/35pts at Arizona when given real ice time | ✅ Strong |
+| Evan Rodrigues | 26 | 2017 | 48 | 2.24 | 11.1 | Won Stanley Cup with Colorado Avalanche 2022 | ✅ Strong |
+| Vinnie Hinostroza | 25 | 2017 | 50 | 2.18 | 11.5 | Still active NHL 2025-26, Florida Panthers | ✅ Partial |
+| Martin Frk | 26 | 2017 | 68 | 2.14 | 11.7 | Coaches limited due to defensive deficiencies (-26 career); now AHL | ❌ Miss |
+| Sven Baertschi | 25 | 2017 | 53 | 2.10 | 13.8 | 13th overall pick; 18G/35pts in 68 games when healthy (0.5 pts/game). Career ended by recurring concussions at 30 | 🟣 Talent derailed by injury |
 
-7 of 8 shortlisted players had meaningful or notable NHL careers after 2019. The one
-confirmed miss — Ryan Spooner — is identifiable through a multi-team consistency check.
+7 of 10 shortlisted players had meaningful or notable NHL careers after 2019.
+Evan Rodrigues won the Stanley Cup with Colorado in 2022. Travis Boyd posted career
+highs when given real ice time elsewhere. Sven Baertschi (13th overall pick, 0.5
+pts/game when healthy) confirms the metric found genuine talent — recurring concussions,
+not the pipeline, ended his career.
 
 **Recommendation:**
-> *"The pipeline narrows 15,099 player-seasons to 8 names worth a scout's time. The
-> >=41 game filter removes injury cases automatically. Evan Rodrigues was undrafted,
-> below-average minutes, flagged by our metric in 2017-18, and won the Stanley Cup in
-> 2022. Travis Boyd posted career highs when given real ice time elsewhere. The pipeline
-> does not make the trade — it surfaces the names that deserve the conversation."*
+> *"The pipeline narrows 15,099 player-seasons to 10 names. Filtering is fully
+> automated using data within the dataset — ages from player_info.csv remove veterans
+> automatically. The 1.57 pts/60 and 33.74-hour TOI thresholds recalculate each
+> season dynamically. The pipeline does not make the trade. It surfaces the right
+> names to investigate."*
 
 ---
 
 ## Call 2 — The Drill: Which shot zones to prioritise in practice?
 
-**Business question:** Where on the rink do shots actually become goals — and where should players spend their practice time?
+**Business question:** Where on the rink do shots actually become goals — and where
+should players spend their practice time?
 
 **Query:**
 ```sql
@@ -92,14 +110,15 @@ missing coordinate rate drops to under 0.15%.
 **Recommendation:**
 > *"Drill players to get to the slot and finish from there. Your forwards need 9 slot
 > attempts to score one goal. From the wing, they need 33. Same player, same skill —
-> different location. Every minute of practice time spent on perimeter shooting is worth
-> 6x less than drilling slot positioning and finishing."*
+> different location. Every minute of practice time spent on perimeter shooting is
+> worth 6x less than drilling slot positioning and finishing."*
 
 ---
 
 ## Call 3 — The Penalty: When do penalties actually cost games?
 
-**Business question:** Which penalties, in which periods, actually correlate with losing the game?
+**Business question:** Which penalties, in which periods, actually correlate with
+losing the game?
 
 **Query:**
 ```sql
@@ -119,30 +138,30 @@ ORDER BY period, avg_loss_rate_pc DESC
 **Finding:**
 Period 3 Game Misconducts correlate with a 68.65% game loss rate — the highest of any
 penalty type and period combination. Period 3 Misconducts overall: 61.88%. Period 1
-Minor penalties: 50.82% — statistically indistinguishable from a coin flip. Notably,
-Period 3 Minor penalties show a 49.14% loss rate — slightly below 50% — because winning
-teams have more puck possession and draw more defensive penalties. The same penalty in
+Minor penalties: 50.82% — statistically indistinguishable from a coin flip. Period 3
+Minor penalties show a 49.14% loss rate — slightly below 50% — because winning teams
+have more puck possession and draw more defensive penalties. The same penalty in
 Period 3 is up to 18 percentage points more consequential than in Period 1.
 
 **Correlation vs causation note:**
 The data shows loss rates associated with penalties — it does not prove the penalty
-caused the loss. Teams already losing may take more desperate penalties regardless of
-period. However, Game Misconducts in Period 3 show a 68.65% loss rate versus 56.50% in
-Period 1 — a 12-point gap for the same penalty type. If score state alone explained the
-pattern, that gap would be much smaller. The combination of severity and timing carries
-independent signal beyond just who is already losing.
+caused the loss. Teams already losing may take more desperate penalties. However,
+Game Misconducts in Period 3 show a 68.65% loss rate versus 56.50% in Period 1 — a
+12-point gap for the same penalty type. If score state alone explained the pattern,
+that gap would be much smaller. Severity and timing carry independent signal.
 
 **Recommendation:**
 > *"Coach discipline differently by period. A Period 1 Minor barely matters — 50.82%
-> loss rate is noise. A Period 3 Game Misconduct costs you the game 68.65% of the time.
-> Whether the penalty caused the loss or the losing situation caused the penalty, the
-> coaching message is the same: composure in Period 3 is non-negotiable."*
+> loss rate is noise. A Period 3 Game Misconduct costs you the game 68.65% of the
+> time. Whether the penalty caused the loss or the losing situation caused the penalty,
+> the coaching message is the same: composure in Period 3 is non-negotiable."*
 
 ---
 
 ## Call 4 — The Arena: How much does home ice actually matter?
 
-**Business question:** How much does playing at home improve a team's chances of winning — and which venues show the strongest effect?
+**Business question:** How much does playing at home improve a team's chances of
+winning — and which venues show the strongest effect?
 
 **Query:**
 ```sql
@@ -168,18 +187,13 @@ LIMIT 10
 | Amalie Arena | Tampa Bay Lightning | 65.86% | +15.86pp | 3.44 | 2.66 |
 | Compaq Center at San Jose | San Jose Sharks | 65.79% | +15.79pp | 3.34 | 2.24 |
 | PPG Paints Arena | Pittsburgh Penguins | 65.69% | +15.69pp | 3.51 | 2.71 |
-| CONSOL Energy Center | Pittsburgh Penguins | 63.67% | +13.67pp | 3.16 | 2.45 |
-| Continental Airlines Arena | New Jersey Devils | 63.63% | +13.63pp | 2.98 | 2.25 |
-| Joe Louis Arena | Detroit Red Wings | 63.53% | +13.53pp | 3.22 | 2.46 |
-| HP Pavilion at San Jose | San Jose Sharks | 63.49% | +13.49pp | 3.11 | 2.38 |
-| First Union Center | Philadelphia Flyers | 63.16% | +13.16pp | 2.85 | 2.11 |
 
-Top NHL home venues show +13 to +22 percentage point win rate uplift over a neutral 50%
-baseline. Home teams score approximately 0.9 more goals per game at their own arena.
-Note: Reunion Arena (Dallas Stars) has a small sample (~36 home games per season, 1-2
-seasons) and should be treated with caution. San Jose Sharks appear twice under two
-arena names (Compaq Center and HP Pavilion) — the same venue renamed mid-dataset.
-Filter: HAVING AVG(home_games) >= 30 excludes outdoor and neutral site games.
+Top NHL home venues show +13 to +22 percentage point win rate uplift over a neutral
+50% baseline. Home teams score approximately 0.9 more goals per game at their own
+arena. Note: Reunion Arena (Dallas Stars) has a small sample (~36 home games per
+season) and should be treated with caution. San Jose Sharks appear twice under two
+arena names — the same venue renamed mid-dataset. Filter: HAVING AVG(home_games) >= 30
+excludes outdoor and neutral site games.
 
 **Recommendation:**
 > *"Home ice advantage is worth +13 to +22 percentage points in win probability at top
@@ -192,7 +206,8 @@ Filter: HAVING AVG(home_games) >= 30 excludes outdoor and neutral site games.
 
 ## Call 5 — The Future: Which franchises are trending up or down?
 
-**Business question:** Which teams are rising, stable or falling as of 2019 — and what does that mean for franchise investment decisions?
+**Business question:** Which teams are rising, stable or falling as of 2019 — and
+what does that mean for franchise investment decisions?
 
 **Query:**
 ```sql
@@ -229,10 +244,10 @@ ORDER BY team_name, season_year
 **How the classification works:**
 Trajectory measures consistent directional momentum across 3 consecutive seasons —
 not the net change between two endpoints. A small but unbroken decline classifies as
-falling. A larger but inconsistent swing classifies as stable. Example: St. Louis Blues
-(-0.73pp net) are falling because their rolling rate declined consistently each year.
-Montreal Canadiens (-1.47pp net) are stable because their year-by-year movement was
-inconsistent.
+falling. A larger but inconsistent swing classifies as stable. Example: St. Louis
+Blues (-0.73pp net) are falling because their rolling rate declined consistently each
+year. Montreal Canadiens (-1.47pp net) are stable because their year-by-year movement
+was inconsistent.
 
 **Finding:**
 9 rising, 12 stable, 12 falling franchises as of 2019.
@@ -258,34 +273,16 @@ inconsistent.
 | San Jose Sharks | 55.50% | 50.57% | -4.93pp | Falling |
 | Pittsburgh Penguins | 59.50% | 54.77% | -4.73pp | Falling |
 
-**Real-world cross-check (verified June 2026):**
-
-Rising teams:
-- Tampa Bay Lightning (+9.16pp) → Won back-to-back Stanley Cups 2020-21 ✅
-- Colorado Avalanche (+11.17pp, largest gain) → Won Stanley Cup 2022 ✅
-- Boston Bruins (+5.30pp) → Set NHL all-time regular season wins record in 2022-23 (65 wins) ✅
-- Carolina Hurricanes (+7.97pp) → 7 consecutive playoff appearances through 2025 ✅
-- Toronto Maple Leafs (+7.56pp) → 8 consecutive playoff appearances; won first series since 2004 in 2023 ✅
-- New York Islanders (+2.30pp) → Back-to-back Conference Finals 2020-21 ✅
-- Winnipeg Jets (+5.14pp) → Consistent playoff team throughout 2020s ✅
-- Arizona Coyotes (+5.04pp) → Relocated to Utah as Utah Mammoth 2024; made playoffs 2025-26 ⚠️
-
-Falling teams:
-- Detroit Red Wings (-8.53pp) → Failed to qualify for playoffs for 10 consecutive seasons through 2025-26 ✅
-- Washington Capitals (-6.07pp) → Have not won since 2018; entering rebuild phase ✅
-- Pittsburgh Penguins (-4.73pp) → Have not won since 2017; entering rebuild ✅
-- San Jose Sharks (-4.93pp) → Full rebuild mode by 2024; among worst teams in league ✅
-- Ottawa Senators (-10.07pp) → Years of rebuilding; returned to playoffs only in 2024-25 ✅
-- Chicago Blackhawks (-8.47pp) → Full rebuild; drafted Connor Bedard #1 overall in 2023 ✅
-- Vegas Golden Knights (-5.90pp) → Won Stanley Cup 2023 despite falling classification ❌ Miss
-- New York Rangers (-7.07pp) → Rebounded to Conference Finals 2024 ❌ Miss
-
-**Notable misses:**
-Vegas Golden Knights (falling -5.90pp) won the Cup in 2023. Their decline reflected
-falling from an unusually high expansion-year peak — they stabilised and rebuilt.
-New York Rangers (falling -7.07pp) also rebounded to contend by 2022-24. Both cases
-show the metric identifies trends, not certainties. Teams can fall, stabilise and
-rebuild within the window.
+**Validation against real outcomes (verified June 2026):**
+Tampa Bay Lightning (+9.16pp) → Won back-to-back Stanley Cups 2020-21 ✅
+Colorado Avalanche (+11.17pp, largest gain) → Won Stanley Cup 2022 ✅
+Boston Bruins (+5.30pp) → Set NHL all-time regular season wins record 2022-23 ✅
+Carolina Hurricanes (+7.97pp) → 7 consecutive playoff appearances through 2025 ✅
+Detroit Red Wings (-8.53pp) → 10 consecutive seasons without playoffs through 2025-26 ✅
+Washington Capitals (-6.07pp) → Have not won since 2018; entering rebuild ✅
+Pittsburgh Penguins (-4.73pp) → Have not won since 2017; entering rebuild ✅
+Vegas Golden Knights (-5.90pp) → Won Stanley Cup 2023 despite falling classification ❌
+New York Rangers (-7.07pp) → Rebounded to Conference Finals 2024 ❌
 
 **Recommendation:**
 > *"Buy into rising franchises before the market corrects — Tampa Bay Lightning and

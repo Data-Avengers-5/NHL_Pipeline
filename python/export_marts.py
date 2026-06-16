@@ -16,7 +16,9 @@ df = conn.execute("""
         m.total_points,
         m.total_toi_seconds / 3600.0    AS total_toi_hours,
         m.points_per_60,
-        m.is_underused_high_impact
+        m.is_underused_high_impact,
+        m.age_at_end_of_dataset,
+        m.is_veteran
     FROM main_gold.mart_player_season m
     JOIN main_gold.dim_player p ON m.player_id = p.player_id
     WHERE m.games_played >= 5
