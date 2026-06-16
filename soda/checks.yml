@@ -1,10 +1,14 @@
 # Soda Core Data Quality Checks
-# NHL Pipeline — Role 5: Normasitah
-# These checks run against the Silver (staging) layer in DuckDB
+# NHL Pipeline — designed for the Silver (staging) layer in DuckDB
 # Run with: soda scan -d nhl_duckdb -c soda/configuration.yml soda/checks.yml
+#
+# Status: Scaffolded data quality coverage. Not executed in Phase 1 — dbt tests
+# are the active DQ layer (see README "Considered but Not Implemented").
+# Updated to match current snake_case staging schema.
 
 # ---------------------------------------------------------------
-# stg_game — one row per game (23,735 rows expected)
+# stg_game — one row per game (filtered: excludes all-star + tbc)
+# Expect <23,735 rows after staging-level filters
 # ---------------------------------------------------------------
 checks for stg_game:
   # Completeness
@@ -14,19 +18,28 @@ checks for stg_game:
       name: game_id must never be null
   - missing_count(season) = 0:
       name: season must never be null
+  - missing_count(season_year) = 0:
+      name: derived season_year must never be null
   - missing_count(home_team_id) = 0:
       name: home team must always be present
   - missing_count(away_team_id) = 0:
       name: away team must always be present
-  - missing_count(outcome) = 0:
-      name: every game must have an outcome
+  - missing_count(winner) = 0:
+      name: winner must be derived from outcome
   # Uniqueness
   - duplicate_count(game_id) = 0:
       name: game_id must be unique
   # Validity
-  - invalid_count(type) = 0:
-      name: game type must be R (regular) or P (playoff)
+  - invalid_count(game_type) = 0:
+      name: game_type must be R (regular) or P (playoff) — A (all-star) excluded at staging
       valid values: [R, P]
+  # Sanity: staging filters should have removed all-star and tbc rows
+  - failed rows:
+      name: no all-star games should survive staging
+      fail condition: is_allstar = true
+  - failed rows:
+      name: no tbc outcomes should survive staging
+      fail condition: is_tbc = true
 
 # ---------------------------------------------------------------
 # stg_game_teams_stats — one row per team per game (52,610 rows expected)
@@ -43,14 +56,17 @@ checks for stg_game_teams_stats:
       name: goals must never be null
   - missing_count(shots) = 0:
       name: shots must never be null
+  - missing_count(is_home) = 0:
+      name: is_home flag must never be null
   # Validity
   - min(goals) >= 0:
       name: goals cannot be negative
   - min(shots) >= 0:
       name: shots cannot be negative
-  - invalid_count(HoA) = 0:
-      name: HoA must be home or away
-      valid values: [home, away]
+  - min(pp_conversion_rate) >= 0:
+      name: power play conversion rate cannot be negative
+  - max(pp_conversion_rate) <= 1:
+      name: power play conversion rate cannot exceed 100 percent
 
 # ---------------------------------------------------------------
 # stg_game_skater_stats — one row per skater per game (945,830 rows expected)
@@ -66,33 +82,16 @@ checks for stg_game_skater_stats:
   - missing_count(team_id) = 0:
       name: team_id must never be null
   # Validity
-  - min(timeOnIce) >= 0:
+  - min(time_on_ice) >= 0:
       name: ice time cannot be negative
   - min(goals) >= 0:
       name: goals cannot be negative
   - min(assists) >= 0:
       name: assists cannot be negative
-
-# ---------------------------------------------------------------
-# stg_game_goalie_stats — one row per goalie per game
-# ---------------------------------------------------------------
-checks for stg_game_goalie_stats:
-  # Completeness
-  - row_count > 0:
-      name: stg_game_goalie_stats must not be empty
-  - missing_count(game_id) = 0:
-      name: game_id must never be null
-  - missing_count(player_id) = 0:
-      name: player_id must never be null
-  - missing_count(team_id) = 0:
-      name: team_id must never be null
-  # Validity
-  - min(timeOnIce) >= 0:
-      name: goalie ice time cannot be negative
-  - min(saves) >= 0:
-      name: saves cannot be negative
-  - min(shots) >= 0:
-      name: shots faced cannot be negative
+  - min(even_time_on_ice) >= 0:
+      name: even-strength ice time cannot be negative
+  - min(pp_time_on_ice) >= 0:
+      name: power-play ice time cannot be negative
 
 # ---------------------------------------------------------------
 # stg_player_info — one row per player (3,925 rows expected)
@@ -103,10 +102,12 @@ checks for stg_player_info:
       name: stg_player_info row count within expected range
   - missing_count(player_id) = 0:
       name: player_id must never be null
-  - missing_count(firstName) = 0:
+  - missing_count(first_name) = 0:
       name: first name must never be null
-  - missing_count(lastName) = 0:
+  - missing_count(last_name) = 0:
       name: last name must never be null
+  - missing_count(full_name) = 0:
+      name: derived full_name must never be null
   # Uniqueness
   - duplicate_count(player_id) = 0:
       name: player_id must be unique
@@ -117,66 +118,79 @@ checks for stg_player_info:
 checks for stg_team_info:
   # Completeness
   - row_count between 30 and 36:
-      name: stg_team_info should have ~33 teams
+      name: stg_team_info should have around 33 teams
   - missing_count(team_id) = 0:
       name: team_id must never be null
-  - missing_count(teamName) = 0:
+  - missing_count(team_name) = 0:
       name: team name must never be null
   - missing_count(abbreviation) = 0:
       name: team abbreviation must never be null
+  - missing_count(city) = 0:
+      name: city must never be null
   # Uniqueness
   - duplicate_count(team_id) = 0:
       name: team_id must be unique
 
 # ---------------------------------------------------------------
-# stg_game_plays — one row per play event (5,050,529 rows expected)
-# Filtered to 5 event types at ingestion
+# stg_game_plays — one row per play event
+# Filtered to 6 event types at staging: Goal, Shot, Missed Shot,
+# Blocked Shot, Penalty, Takeaway. Deduped on play_id.
 # ---------------------------------------------------------------
 checks for stg_game_plays:
   # Completeness
-  - row_count between 4000000 and 6000000:
-      name: stg_game_plays row count within expected range
+  - row_count between 2000000 and 4000000:
+      name: stg_game_plays row count within expected range (post-filter)
   - missing_count(play_id) = 0:
       name: play_id must never be null
   - missing_count(game_id) = 0:
       name: game_id must never be null
   - missing_count(event) = 0:
       name: event type must never be null
-  # Validity — only 5 event types should exist after ingestion filter
+  # Uniqueness — QUALIFY ROW_NUMBER() should leave one row per play_id
+  - duplicate_count(play_id) = 0:
+      name: play_id must be unique after staging dedup
+  # Validity — only the 6 filtered event types should survive
   - invalid_count(event) = 0:
       name: only filtered event types should be present
-      valid values: [Goal, Shot, Missed Shot, Blocked Shot, Penalty]
-  # The 41% finding — goal coordinates are systematically missing
-  - missing_percent(x) < 50:
-      name: overall x coordinate missing rate should be under 50 percent
-  - missing_percent(y) < 50:
-      name: overall y coordinate missing rate should be under 50 percent
-  # Alert if goal coordinate NULL rate drops below expected range
-  # This fires if someone filters NULLs out upstream — protecting the finding
-  - missing_percent(x) > 30:
-      name: goal x coordinate missing rate should be above 30 percent (41.4% expected)
+      valid values: [Goal, Shot, Missed Shot, Blocked Shot, Penalty, Takeaway]
+  # The 41% finding — goal coordinates are systematically missing pre-2010
+  # Overall coordinate missing rate should be moderate (most events post-2010)
+  - missing_percent(coord_x) < 50:
+      name: overall coord_x missing rate should be under 50 percent
+  - missing_percent(coord_y) < 50:
+      name: overall coord_y missing rate should be under 50 percent
+  # Sentinel: alert if goal coordinate NULL rate drops below expected.
+  # Fires if someone silently imputes or filters NULLs upstream — protects
+  # the visibility of the era-boundary finding.
+  - missing_percent(coord_x) > 30:
+      name: goal coord_x missing rate should be above 30 percent (41.4% expected)
       filter: event = 'Goal'
 
 # ---------------------------------------------------------------
-# stg_game_penalties — one row per penalty (247,828 rows expected)
+# stg_game_penalties — one row per penalty play (247,828 rows expected
+# at source; deduped on play_id at staging)
+# Note: this staging model is narrow — only play_id, penalty_severity,
+# and penalty_minutes. Game/team context is joined downstream in
+# mart_penalty_cost via fct_play.
 # ---------------------------------------------------------------
 checks for stg_game_penalties:
   # Completeness
   - row_count between 200000 and 300000:
       name: stg_game_penalties row count within expected range
-  - missing_count(game_id) = 0:
-      name: game_id must never be null
-  - missing_count(team_id_for) = 0:
-      name: penalised team must always be present
-  - missing_count(penaltySeverity) = 0:
+  - missing_count(play_id) = 0:
+      name: play_id must never be null
+  - missing_count(penalty_severity) = 0:
       name: penalty severity must never be null
-  - missing_count(penaltyMinutes) = 0:
+  - missing_count(penalty_minutes) = 0:
       name: penalty minutes must never be null
+  # Uniqueness — QUALIFY dedup at staging
+  - duplicate_count(play_id) = 0:
+      name: play_id must be unique after staging dedup
   # Validity
-  - min(penaltyMinutes) >= 2:
+  - min(penalty_minutes) >= 2:
       name: minimum penalty is 2 minutes
-  - max(penaltyMinutes) <= 10:
+  - max(penalty_minutes) <= 10:
       name: maximum standard penalty is 10 minutes
-  - invalid_count(penaltySeverity) = 0:
+  - invalid_count(penalty_severity) = 0:
       name: penalty severity must be a known type
-      valid values: [Minor, Major, Misconduct, Game Misconduct, Match]
+      valid values: [Minor, Major, Misconduct, Game Misconduct, Match, Bench Minor, Penalty Shot]
