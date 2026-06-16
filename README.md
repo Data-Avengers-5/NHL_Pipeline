@@ -122,7 +122,7 @@ Coverage: 2000–2020 · 19 seasons · 23,735 games · 5,050,529 in-game events
 | `game_penalties.csv`    | 247,828   | One row per penalty event                       | Decision 3     |
 | `team_info.csv`         | 33        | Team metadata                                   | All decisions  |
 
-> **Note on `game_plays`:** We filter to 6 event types at the staging layer — Goal, Shot, Missed Shot, Blocked Shot, Hit, Takeaway — retaining everything needed for the business questions while reducing volume.
+> **Note on `game_plays`:** We filter to 6 event types at the staging layer — Goal, Shot, Missed Shot, Blocked Shot, Penalty, Takeaway — retaining everything needed for the business questions while reducing volume.
 
 ---
 
