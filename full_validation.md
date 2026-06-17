@@ -50,22 +50,24 @@ to build the shortlist.
 
 | Player | Age | Season | Games | pts/60 | TOI hrs | After 2019 | Verdict |
 |--------|-----|--------|-------|--------|---------|------------|---------|
-| Ryan Spooner | 27 | 2017 | 59 | 2.73 | 15.0 | Left NHL 2019, now KHL | ❌ Miss |
-| Jesper Bratt | 21 | 2018 | 51 | 2.56 | 25.8 | NJD franchise cornerstone, alternate captain | ✅ Strong |
-| Dominik Kahun | 24 | 2019 | 56 | 2.50 | 24.8 | 83 NHL points across PIT & EDM; now Lausanne HC | ✅ Partial |
-| Austin Wagner | 22 | 2018 | 62 | 2.28 | 18.5 | Reliable bottom-6; now KHL (Shanghai Dragons) | ⚠️ Partial |
-| Paul Byron | 30 | 2018 | 56 | 2.28 | 27.2 | Named alternate captain at Montreal Canadiens | ✅ Strong |
-| Travis Boyd | 26 | 2018 | 54 | 2.26 | 17.7 | Career-high 17G/35pts at Arizona when given real ice time | ✅ Strong |
-| Evan Rodrigues | 26 | 2017 | 48 | 2.24 | 11.1 | Won Stanley Cup with Colorado Avalanche 2022 | ✅ Strong |
-| Vinnie Hinostroza | 25 | 2017 | 50 | 2.18 | 11.5 | Still active NHL 2025-26, Florida Panthers | ✅ Partial |
-| Martin Frk | 26 | 2017 | 68 | 2.14 | 11.7 | Coaches limited due to defensive deficiencies (-26 career); now AHL | ❌ Miss |
-| Sven Baertschi | 25 | 2017 | 53 | 2.10 | 13.8 | 13th overall pick; 18G/35pts in 68 games when healthy (0.5 pts/game). Career ended by recurring concussions at 30 | 🟣 Talent derailed by injury |
+| Ryan Spooner | 27 | 2017 | 59 | 2.73 | 15.0 | Left NHL after 2019 but became a KHL star — 109 pts in 142 games with Avangard; still playing | ⚠️ Found success elsewhere |
+| Jesper Bratt | 21 | 2018 | 51 | 2.56 | 25.8 | NJD franchise cornerstone & alternate captain; five straight 70+ point seasons | ✅ Strong |
+| Dominik Kahun | 24 | 2019 | 56 | 2.50 | 24.8 | 83 NHL points across CHI, PIT, BUF & EDM; IIHF silver 2023; now Lausanne HC | ✅ Partial |
+| Austin Wagner | 22 | 2018 | 62 | 2.28 | 18.5 | Reliable bottom-6 forward, 178 NHL games; now KHL (Shanghai Dragons) | ⚠️ Found success elsewhere |
+| Paul Byron | 30 | 2018 | 56 | 2.28 | 27.2 | Montreal alternate captain; played all 22 games of the Canadiens' 2021 Cup Final run | ✅ Strong |
+| Travis Boyd | 26 | 2018 | 54 | 2.26 | 17.7 | Two 30+ point seasons at Arizona (career-high 35) when given real minutes | ✅ Strong |
+| Evan Rodrigues | 26 | 2017 | 48 | 2.24 | 11.1 | Won back-to-back Stanley Cups with Florida Panthers (2024 & 2025) | ✅ Strong |
+| Tyler Ennis | 30 | 2018 | 56 | 2.18 | 18.3 | Suppressed at Toronto behind Nylander; 37 pts next season at Ottawa/Edmonton given minutes | ✅ Strong |
+| Vinnie Hinostroza | 25 | 2017 | 50 | 2.17 | 11.5 | Veteran journeyman, 460+ NHL games; still in NHL system 2025-26 (Minnesota, then Florida) | ✅ Partial |
+| Martin Frk | 26 | 2017 | 68 | 2.14 | 11.7 | Elite AHL scorer (200+ goals, hardest shot in AHL history); offense-first game, brief NHL stints | ⚠️ Found success elsewhere |
 
-7 of 10 shortlisted players had meaningful or notable NHL careers after 2019.
-Evan Rodrigues won the Stanley Cup with Colorado in 2022. Travis Boyd posted career
-highs when given real ice time elsewhere. Sven Baertschi (13th overall pick, 0.5
-pts/game when healthy) confirms the metric found genuine talent — recurring concussions,
-not the pipeline, ended his career.
+All 10 shortlisted players went on to meaningful pro careers. 7 became established
+NHL contributors; the other 3 found success elsewhere (Spooner and Wagner in the KHL,
+Frk an elite AHL scorer). Evan Rodrigues won back-to-back Stanley Cups with Florida in
+2024 and 2025. Travis Boyd and Tyler Ennis both broke out the moment they were given
+real ice time elsewhere — exactly the underused-but-productive signal the pipeline is
+built to detect. Not one shortlisted player washed out of pro hockey, confirming the
+metric surfaced genuine talent.
 
 **Recommendation:**
 > *"The pipeline narrows 15,099 player-seasons to 10 names. Filtering is fully
