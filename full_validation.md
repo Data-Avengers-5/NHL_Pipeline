@@ -99,19 +99,18 @@ ORDER BY avg_conversion_rate DESC
 **Finding:**
 | Zone | Conversion Rate | Total Shots | Total Goals |
 |------|----------------|-------------|-------------|
-| Slot | 19.46% | 569,584 | 111,959 |
-| Other | 10.65% | 346,087 | 36,932 |
-| Point | 5.18% | 308,620 | 16,001 |
-| Right wing | 3.11% | 246,424 | 7,915 |
-| Left wing | 3.02% | 251,242 | 7,850 |
-
-Slot shots convert at 19.46% — 6x higher than wing shots at ~3%. Analysis scoped to
+| Slot | 19.45% | 279,298 | 54,329 |
+| Other | 10.65% | 162,571 | 17,312 |
+| Point | 5.18% | 151,222 | 7,829 |
+| Right wing | 3.13% | 123,952 | 3,883 |
+| Left wing | 3.05% | 124,966 | 3,806 |
+Slot shots convert at 19.45% — 6x higher than wing shots at ~3%. Analysis scoped to
 2010-2019 only. Pre-2010 data has 100% missing coordinates and is excluded. Post-2010
-missing coordinate rate drops to under 0.15%.
+coverage is 99.96% complete (32 missing of 71,576).
 
 **Recommendation:**
-> *"Drill players to get to the slot and finish from there. Your forwards need 9 slot
-> attempts to score one goal. From the wing, they need 33. Same player, same skill —
+> *"Drill players to get to the slot and finish from there. Your forwards need ~5 slot
+> shots to score one goal. From the wing, they need ~30. Same player, same skill —
 > different location. Every minute of practice time spent on perimeter shooting is
 > worth 6x less than drilling slot positioning and finishing."*
 
