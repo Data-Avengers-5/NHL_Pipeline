@@ -1,3 +1,12 @@
+# Pipeline Model ERD
+
+Full entity-relationship diagram — dims, facts, and gold marts.
+Verified against actual dbt SQL. Last updated June 2026.
+
+> **Note:** `dim_player` and `dim_team` are also consumed by Power BI
+> for readable names — those are BI-layer connections, not dbt SQL joins.
+
+```mermaid
 erDiagram
   dim_game ||--o{ fct_play : "game_id"
   dim_game ||--o{ fct_game_teams_stats : "game_id"
@@ -54,22 +63,17 @@ erDiagram
   mart_shot_zones {
     varchar shot_zone PK
     int season_year
-    int total_shots
-    int total_goals
     float shot_conversion_rate
   }
   mart_penalty_cost {
     int period PK
     varchar penalty_severity PK
-    int total_penalties
     float loss_rate_pc
   }
   mart_venue_advtg {
     varchar venue PK
     int season_year
-    int home_games
     float home_win_pct
-    float avg_home_goals
   }
   mart_team_traject {
     int team_id FK
@@ -77,3 +81,4 @@ erDiagram
     float win_pct
     varchar trajectory
   }
+```
