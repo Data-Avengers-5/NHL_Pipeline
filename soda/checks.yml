@@ -163,7 +163,7 @@ checks for stg_game_plays:
   # Fires if someone silently imputes or filters NULLs upstream — protects
   # the visibility of the era-boundary finding.
   - missing_percent(coord_x) > 30:
-      name: goal coord_x missing rate should be above 30 percent (41.4% expected)
+      name: goal coord_x missing rate should be above 30 percent (46.3% expected)
       filter: event = 'Goal'
 
 # ---------------------------------------------------------------

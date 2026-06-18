@@ -23,3 +23,5 @@ from {{ source('raw', 'game') }}
 -- exclude all-star games and tbc outcomes at staging level
 where type != 'A'
   and outcome not like '%tbc%'
+  -- dedup byte-identical duplicate rows in raw.game (~2,570 affected, 2018-19 onwards)
+qualify row_number() over (partition by game_id order by game_id) = 1
