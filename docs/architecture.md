@@ -91,7 +91,7 @@ The Power BI Desktop dashboard reads these CSVs and presents each business decis
 
 ## Headline Finding
 
-**41.4% of GOAL events (61,740 of 148,928) are missing x/y rink coordinates.** SHOT events are only 0.34% missing.
+**46.3% of GOAL events (61,737 of 133,345) are missing x/y rink coordinates.** SHOT events are only 0.34% missing.
 
 Root cause: the NHL began tracking play-level coordinates in the 2007–08 season. Pre-2010 records are 100% missing for both shots and goals; post-2010 records are <0.15% missing. The defect is an era boundary, not random noise.
 

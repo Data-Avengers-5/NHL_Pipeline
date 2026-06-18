@@ -2,7 +2,7 @@
 
 ### What We Found
 
-Of **148,928 GOAL events** across 19 years of NHL data (2000–2020), **61,740 records (41.46%)** are missing x/y rink coordinate data. By contrast, SHOT events are only missing coordinates **0.34%** of the time.
+Of **133,345 GOAL events** across 19 years of NHL data (2000–2020), **61,737 records (46.30%)** are missing x/y rink coordinate data. By contrast, SHOT events are only missing coordinates **0.34%** of the time.
 
 This is not random noise — it is a clean era boundary in NHL data collection history.
 

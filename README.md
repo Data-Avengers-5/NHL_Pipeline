@@ -9,7 +9,7 @@ The data pipeline that runs a hockey franchise. Five calls. Five million-dollar 
 
 We built a decision engine on 19 years of NHL game data that answers 5 commercial questions a General Manager would actually face — each backed by descriptive analytics and a quantified recommendation.
 
-The pipeline ingests 7 raw CSV files, transforms them through a star schema in DuckDB managed by dbt, and surfaces findings in a Power BI dashboard. Along the way it uncovered the headline finding: **41.4% of all NHL goal records are missing coordinate data** — a structural defect undetected across 19 years of public data.
+The pipeline ingests 7 raw CSV files, transforms them through a star schema in DuckDB managed by dbt, and surfaces findings in a Power BI dashboard. Along the way it uncovered the headline finding: **46.3% of all NHL goal records are missing coordinate data** — a structural defect undetected across 19 years of public data.
 
 ---
 
@@ -189,7 +189,7 @@ Data quality is enforced through **dbt tests** integrated into the build:
 
 Source data issues — including duplicate rows across three raw tables in the 2018–2019 seasons (which doubled goal-event counts before fixing) — are documented in `docs/findings.md` and resolved at the staging layer rather than masked downstream.
 
-**Headline finding:** 41.4% of GOAL events (61,740 of 148,928) are missing x/y rink coordinates. SHOT events are only 0.34% missing. Root cause: NHL only began tracking coordinates in 2007–08; pre-2010 records are 100% missing for both shots and goals. The `mart_shot_zones` mart is therefore scoped to 2010-onwards to avoid era-boundary bias. Full analysis in `docs/findings.md`.
+**Headline finding:** 46.3% of GOAL events (61,737 of 133,345) are missing x/y rink coordinates. SHOT events are only 0.34% missing. Root cause: NHL only began tracking coordinates in 2007–08; pre-2010 records are 100% missing for both shots and goals (58,949 of 58,949). Post-2010 coverage is 99.96% complete (32 missing of 71,576). The `mart_shot_zones` mart is therefore scoped to 2010-onwards to avoid era-boundary bias. Full analysis in `docs/findings.md`.
 
 ---
 
