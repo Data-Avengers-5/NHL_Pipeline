@@ -99,14 +99,14 @@ ORDER BY avg_conversion_rate DESC
 **Finding:**
 | Zone | Conversion Rate | Total Shots | Total Goals |
 |------|----------------|-------------|-------------|
-| Slot | 19.45% | 279,298 | 54,329 |
-| Other | 10.65% | 162,571 | 17,312 |
-| Point | 5.18% | 151,222 | 7,829 |
-| Right wing | 3.13% | 123,952 | 3,883 |
-| Left wing | 3.05% | 124,966 | 3,806 |
-Slot shots convert at 19.45% — 6x higher than wing shots at ~3%. Analysis scoped to
-2010-2019 only. Pre-2010 data has 100% missing coordinates and is excluded. Post-2010
-coverage is 99.96% complete (32 missing of 71,576).
+| Low slot   | 19.45% | 279,298 | 54,329 |
+| High slot  | 12.04% | 132,645 | 15,970 |
+| Other      |  5.30% |  38,120 |  2,019 |
+| Point      |  5.00% | 143,028 |  7,152 |
+| Right wing |  3.13% | 123,952 |  3,883 |
+| Left wing  |  3.05% | 124,966 |  3,806 |
+
+The slot was split into **low slot** (x ≥ 69, |y| ≤ 22 — closest to net) and **high slot** (54 ≤ x ≤ 68, |y| ≤ 22 — between hash marks and top of circles) to match NHL convention and surface the gradient of danger. Low-slot shots convert at 19.45% — 6× higher than wing shots at ~3%, and ~1.6× higher than high-slot shots at 12.04%. Analysis scoped to 2010-2019 only. Pre-2010 data has 100% missing coordinates and is excluded. Post-2010 coverage is 99.96% complete (32 missing of 71,576).
 
 **Recommendation:**
 > *"Drill players to get to the slot and finish from there. Your forwards need ~5 slot

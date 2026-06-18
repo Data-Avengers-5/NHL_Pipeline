@@ -1,4 +1,4 @@
-## Headline Finding: The 41% Coordinate Gap
+## Headline Finding: The 46% Coordinate Gap
 
 ### What We Found
 
@@ -15,7 +15,7 @@ The NHL began publicly tracking shot coordinates and shot types in the **2007-08
 | Pre-2010 | 100% missing | <700/season (not systematically tracked) |
 | 2010 onwards | <0.15% missing | 70,000–155,000/season (full tracking) |
 
-The 41% overall missing rate is entirely explained by pre-2010 seasons having no coordinate tracking. Post-2010 data is near-perfect.
+The 46% overall missing rate is entirely explained by pre-2010 seasons having no coordinate tracking. Post-2010 data is near-perfect.
 
 ### Why This Matters
 
@@ -44,4 +44,4 @@ Expected output: Goals pre-2010 → 100% missing. Goals post-2010 → <0.15%. Sh
 
 ### The Engineering Maturity Signal
 
-> *"The NHL began tracking shot coordinates in 2007-08 — the foundation of modern hockey analytics. Our dataset reflects this era boundary: pre-2010 seasons have no coordinate data, post-2010 is near-perfect. The 41% overall coordinate gap is entirely explained by this historical boundary — not a pipeline error, not random noise. We identified it, documented it, and scoped all spatial analysis accordingly. That's what separates a production pipeline from a dashboard."*
+> *"The NHL began tracking shot coordinates in 2007-08 — the foundation of modern hockey analytics. Our dataset reflects this era boundary: pre-2010 seasons have no coordinate data, post-2010 is near-perfect. The 46.3% overall coordinate gap is entirely explained by this historical boundary — not a pipeline error, not random noise. We identified it, documented it, and scoped all spatial analysis accordingly. That's what separates a production pipeline from a dashboard."*
