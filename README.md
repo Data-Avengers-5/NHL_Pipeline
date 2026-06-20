@@ -75,7 +75,7 @@ NHL_Pipeline/
 │   └── exports/                        # Mart exports for Power BI
 ├── docs/
 │   ├── architecture.md                 # Pipeline design and tool decisions
-│   ├── findings.md                     # The 41% story + data quality findings
+│   ├── findings.md                     # The 46% story + data quality findings
 │   └── table_relationships.JPG         # ERD
 ├── python/
 │   ├── ingest.py                       # Polars: CSV → DuckDB bronze layer
@@ -218,7 +218,7 @@ Including these honestly here rather than in the active stack — the scope call
 Pipeline documentation in `/docs`:
 
 - `architecture.md` — pipeline design, tool decisions, medallion layers
-- `findings.md` — the 41% story, business question answers, recommendations
+- `findings.md` — the 46% story, business question answers, recommendations
 
 Verified outputs and deliverables at the repo root:
 
